@@ -12644,7 +12644,145 @@ textarea.form-control-lg {
 }
 
 /* Base */
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
 .logo-grand {
   height: 80px;
+}
+
+.slider-oligume {
+  /*   background-image: url(../assets/banner.jpg); */
+  background-image: url(../assets/banner6.jpg);
+  /*   background-image: url(../assets/banner3.webp); */
+  height: 500px;
+  background-size: cover;
+  background-repeat: repeat;
+  background-color: #fff;
+  background-position: center center;
+}
+
+.nav-item .nav-link {
+  margin-right: 15px;
+  font-weight: 600;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.rubik-regular {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-bold {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.social-icons a {
+  font-size: 23px;
+  margin: 0 0 0 1rem;
+  color: #62b51f;
+}
+
+.title-page {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.title-producto {
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.btn-green {
+  border-radius: 23px;
+  background: #62b51f;
+  border: 1px solid #62b51f;
+  color: #fff;
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
+  text-align: center;
+  display: block;
+  padding: 5px 10px;
+  min-width: 150px;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  bottom: 0;
+  min-height: 26px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.btn-contactar {
+  border-radius: 23px;
+  background: #62b51f;
+  border: 1px solid #62b51f;
+  color: #fff;
+}
+
+.btn-contactar:hover {
+  text-decoration: none;
+  color: #62b51f;
+  background: #fff;
+  border: 1px solid #62b51f;
+}
+
+.section-header {
+  background-color: #f3f0e2;
+  padding: 48px;
+}
+
+.heading_title_pages {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+
+.detalle-producto {
+  list-style-image: none;
+  list-style-type: none;
+  font-weight: 300;
+  padding: 0;
+}
+
+.detalle-producto li {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  color: #696969;
+  margin-bottom: 7px;
+}
+
+.detalle-producto li span {
+  font-weight: 600;
+}
+
+.navbar.bg-light {
+  -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=styles.css.map */
