@@ -10826,31 +10826,57 @@ textarea.form-control-lg {
 }
 
 /* Base */
-body {
-  font-family: "Lato", sans-serif;
-  // font-size: 1rem;
-  color: #333;
+
+:root {
+  --gray-text: #333333;
+  --green-light: #8bc34a;
+  --green-dark: #4A642F;
+  --green-yellow: #7f7a5d;
+  
+  --bs-link-color:#333333;
+  --bs-link-hover-color: #8bc34a;
 }
 
 
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--gray-text);
+}
+
+a {
+  color: var(--gray-text);
+}
+
 .logo-grand  {
-  height: 80px;
+  height: 85px;
 }
 
 .slider-oligume {
 /*   background-image: url(../assets/banner.jpg); */
-  background-image: url(../assets/banner6.jpg);
-/*   background-image: url(../assets/banner3.webp); */
+  // background-image: url(../assets/banner6.jpg);
+  /* background-image: url(../assets/banner-producto.png); */
+ /*  background-image: url(../assets/banner-aceitunas.jpg); */
+  background-image: url(../assets/home2.jpg);
   height: 500px;
-  background-size: cover;
-  background-repeat: repeat;
-  background-color: #fff;
-  background-position: center center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #DBDFE2;
+   background-position: center center;
+ // background-position: 360px -150px;
 }
 
+.box-slider {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 .nav-item .nav-link {
   margin-right: 15px;
   font-weight: 600;
+  text-transform: uppercase;
+  // color: var(--gray-text);
 }
 
 .lato-regular {
@@ -10881,7 +10907,9 @@ body {
 .social-icons a {
   font-size: 23px;
   margin: 0 0 0 1rem;
-  color: #62b51f;
+  &:hover {
+    color: var(--green-light);
+  }
 }
 
 .title-page {
@@ -10918,7 +10946,7 @@ body {
 
 .btn-contactar {
   border-radius: 23px;
-  background: #62b51f;
+  background: var(--green-light);
   border: 1px solid #62b51f;
   color: #fff; 
   &:hover {
@@ -10967,3 +10995,28 @@ body {
 .navbar.bg-light {
   box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
 }
+
+.title-slider {
+  color: var(--green-yellow);
+  font-size: 4.5rem;
+}
+.box-subtitle {
+  opacity: 0.8;
+}
+.subtitle-slider {
+  background-color: gainsboro;
+  color: var(--green-yellow);
+  font-size: 2.5rem;
+}
+
+/* Detalle Producto */
+
+section.section-descripcion {
+  padding-bottom: 2rem;
+}
+
+.precio-real {
+  font-size: 1.5rem;
+  color: var(--green-light);
+}
+

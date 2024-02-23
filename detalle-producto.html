@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Shop Item - Start Bootstrap Template</title>
+        <title>Detalle de Producto</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -59,7 +59,7 @@
             </div>
         </section>
         <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
+            <div class="container">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <!-- <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." /></div> -->
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="assets/aceite-litro.png" alt="..." /></div>
@@ -68,7 +68,7 @@
                         <h1 class="title-producto">Aceite de oliva extra virgen</h1>
                         <div class="fs-5 mb-4">
                             <span class="text-decoration-line-through">S/.50.00</span>
-                            <span>S/.48.00</span>
+                            <span class="precio-real">S/.48.00</span>
                         </div>
                         <ul class="detalle-producto">
                             <li>Marca: <span>Oligume</span></li>
@@ -78,7 +78,7 @@
                             <li>Pedido Min: <span> 1</span></li>
                             <li>Disponibilidad: <span> Todo el año</span></li>
                         </ul>
-                        <a href="" class="btn btn-primary mb-4 btn-contactar">Contactar Productor</a>
+                        <a href="" class="btn mb-4 btn-contactar">Contactar Productor</a>
                         <!-- <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p> -->
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
@@ -91,6 +91,35 @@
                 </div>
             </div>
         </section>
+        <section class="section-descripcion">
+            <div class="container">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Descripción</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Información Nutricional</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Información de Envio</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p> 
+                            Procede de cultivos de aceitunas con control biológicos, son de calibre grande de primera, procesadas de forma natural con agua y sal, libre de insecticidas y pesticidas. Proporciona beneficios para la salud, vitaminas C y tianimas, minerales calcio e hierro y antioxidantes, como propiedades antiflamatorias y para disminuir el colesterol.</p>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae necessitatibus ullam dolorem tempora et, ipsam commodi minus eius velit maxime molestiae cumque harum esse aliquid rerum distinctio quae doloribus officiis cum, officia, consectetur aut doloremque veniam. Incidunt dolor, voluptate fuga sapiente magni natus ad nam cumque ratione maiores doloremque.</p>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <p>Envío gratuito en España peninsular en pedidos a partir de 60€. Recibe tu pedido entre 3 y 5 días hábiles
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Related items section-->
         <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
