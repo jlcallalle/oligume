@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Aceite de Oliva 1 Lt",
+      "price": 48,
+      "images": "./assets/aceite-litro.png",
+      "type": "Aceite de Oliva Extra Virgen",
+      "description": "Descripción del producto 1"
+    },
+    {
+      "id": 2,
+      "name": "Aceite de Oliva 1/2 Lt",
+      "price": 25,
+      "images": "./assets/aceite-500ml.png",
+      "type": "Aceite de Oliva Extra Virgen",
+      "description": "Descripción del producto 2"
+    },
+    {
+      "id": 3,
+      "name": "Aceitunas Negras 1kg",
+      "price": 20,
+      "images": "./assets/aceiguna-negra-kg.jpg",
+      "type": "Aceitunas Selectas",
+      "description": "Descripción del producto 3"
+    },
+    {
+      "id": 4,
+      "name": "Aceitunas Negras 1/2kg",
+      "price": 10,
+      "images": "./assets/aceituna-negra-medio.jpg",
+      "type": "Aceitunas Selectas",
+      "description": "Descripción del producto 4"
+    }
+  ]
+}

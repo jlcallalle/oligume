@@ -12742,12 +12742,6 @@ a {
   text-align: center;
 }
 
-.title-producto {
-  font-family: "Rubik", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
 .btn-green {
   border-radius: 23px;
   background: #62b51f;
@@ -12781,44 +12775,14 @@ a {
   border: 1px solid #62b51f;
 }
 
-.section-header {
-  background-color: #f3f0e2;
-  padding: 48px;
-}
-
-.heading_title_pages {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: 3px;
-  word-spacing: 5px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #333;
-}
-
-.detalle-producto {
-  list-style-image: none;
-  list-style-type: none;
-  font-weight: 300;
-  padding: 0;
-}
-
-.detalle-producto li {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
-  color: #696969;
-  margin-bottom: 7px;
-}
-
-.detalle-producto li span {
-  font-weight: 600;
-}
-
 .navbar.bg-light {
   -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+}
+
+.listado-productos {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .title-slider {
@@ -12837,12 +12801,58 @@ a {
 }
 
 /* Detalle Producto */
-section.section-descripcion {
-  padding-bottom: 2rem;
+.producto-header {
+  background-color: #f3f0e2;
+  padding: 48px;
+}
+
+.producto-header h1 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+
+.title-producto {
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.producto-detalle {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .precio-real {
   font-size: 1.5rem;
   color: var(--green-light);
+}
+
+.data-producto {
+  list-style-image: none;
+  list-style-type: none;
+  font-weight: 300;
+  padding: 0;
+}
+
+.data-producto li {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  color: #696969;
+  margin-bottom: 7px;
+}
+
+.data-producto li span {
+  font-weight: 600;
+}
+
+.section-descripcion {
+  padding-bottom: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */
