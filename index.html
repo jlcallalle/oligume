@@ -11,13 +11,12 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)--> 
+    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-   </style>
-    
+        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+    </style>
 </head>
 
 <body>
@@ -57,9 +56,12 @@
                 </ul>
 
                 <div class="social-icons">
-                    <a class="social-icon" href="https://facebook.com/oligume" target="_blank"><i class="bi bi-facebook"></i></a>
-                    <a class="social-icon" href="https://www.instagram.com/oligume"  target="_blank"> <i class="bi bi-instagram"></i></a>
-                    <a class="social-icon" href="https://wa.me/51934835047"  target="_blank"> <i class="bi bi-whatsapp"></i></a> 
+                    <a class="social-icon" href="https://facebook.com/oligume" target="_blank"><i
+                            class="bi bi-facebook"></i></a>
+                    <a class="social-icon" href="https://www.instagram.com/oligume" target="_blank">
+                        <i class="bi bi-instagram"></i></a>
+                    <a class="social-icon" href="https://wa.me/51934835047" target="_blank">
+                        <i class="bi bi-whatsapp"></i></a>
                 </div>
                 <!-- <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
@@ -77,247 +79,57 @@
             <div class="box-slider">
                 <h1 class="display-4 fw-bolder title-slider">OLIGUME,</h1>
                 <div class="box-subtitle">
-                    <p class="lead fw-normal mb-0 subtitle-slider">Productores de Aceitunas del Valle de Acarí, Arequipa.</p>
+                    <p class="lead fw-normal mb-0 subtitle-slider">
+                        Productores de Aceitunas del Valle de Acarí, Arequipa.
+                    </p>
                 </div>
             </div>
         </div>
     </header>
     <!-- Section-->
 
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="title-page">Productos Destacados</h2>
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="assets/aceite-litro.png" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Aceite de Oliva 1 Lt</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
+    <div id="app">
+        <div :class="[detalleProducto == false ? 'home1' : 'detalle-producto2' ]"></div>
+        <div class="listado-productos py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <h2 class="title-page">Productos Destacados</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5" v-for="product in products" :key="product.id">
+                        <div class="card h-100">
+                            <img :src="product.images" :alt="product.name">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder"> {{ product.name }} </h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <span>S/. {{ product.price }}</span>
                                 </div>
-                                <!-- Product price-->
-                                <!-- <span class="text-muted text-decoration-line-through">S/.50.00</span> -->
-                                S/. 48
                             </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="detalle-producto.html">Ver Detalle</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <!-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div> -->
-                        <!-- Product image-->
-                        <img class="card-img-top" src="assets/aceite-500ml.png"/>
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Aceite de Oliva 1/2 Lt</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" @click="showDetail(product)">Ver Detalle - {{ product.id }}</a>
                                 </div>
-                                <!-- Product price-->
-                                <!-- <span class="text-muted text-decoration-line-through">S/.27.00</span> -->
-                                S/.25.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Ver Detalle</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <!-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Sale
-                        </div> -->
-                        <!-- Product image-->
-                        <img class="card-img-top" src="assets/aceiguna-negra-kg.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Aceitunas Negras 1kg</h5>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">S/.20.00</span>
-                                S/. 18.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Ver Detalle</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="assets/aceituna-negra-medio.jpg" ..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Aceitunas Negras 1/2kg </h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                S/. 10.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Ver Detalle</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Sale
-                        </div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Sale Item</h5>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span>
-                                $25.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Ver Detalle</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Fancy Product</h5>
-                                <!-- Product price-->
-                                $120.00 - $280.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">View options</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Sale
-                        </div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Special Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span>
-                                $18.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Ver Detalle</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                $40.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Ver Detalle</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <br>
+        <h1 v-if="selectedProduct">Detalle de Producto</h1>
+        <div v-if="selectedProduct">
+            <h2>{{ selectedProduct.name }}</h2>
+            <p>Precio: ${{ selectedProduct.price }}</p>
+            <p>Descripción: {{ selectedProduct.description }}</p>
+        </div>
+    </div>
+
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">
@@ -326,10 +138,36 @@
             </p>
         </div>
     </footer>
+
+
+    <!-- Vue JS-->
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                detalleProducto: false,
+                selectedProduct: null,
+                products : [
+                    { id: 1, name: 'Aceite de Oliva 1 Lt', price: 48, images: './assets/aceite-litro.png',  description: 'Descripción del producto 1' },
+                    { id: 2, name: 'Aceite de Oliva 1/2 Lt', price: 25, images: './assets/aceite-500ml.png',  description: 'Descripción del producto 2' },
+                    { id: 3, name: 'Aceitunas Negras 1kg', price: 20, images: './assets/aceiguna-negra-kg.jpg',  description: 'Descripción del producto 3' },
+                    { id: 4, name: 'Aceitunas Negras 1/2kg', price: 10, images: './assets/aceituna-negra-medio.jpg',  description: 'Descripción del producto 4' },
+                ]
+            },
+            methods: {
+                // Método para mostrar el detalle de un producto
+                showDetail(product) {
+                this.selectedProduct = product;
+                }
+            }
+        });
+        Vue.config.devtools = true;
+    </script>
 </body>
 
 </html>
