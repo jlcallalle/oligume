@@ -76,13 +76,14 @@
     <!-- Header-->
   
     <div id="app">
+        <p class="d-none"> {{ products }}</p>
         <header class="slider-oligume" v-if="!showProduct">
             <div class="container px-4">
                 <div class="box-slider">
-                    <h1 class="display-4 fw-bolder title-slider">OLIGUME,</h1>
+                    <h1 class="display-4 fw-bolder title-slider">OLIGUME</h1>
                     <div class="box-subtitle">
                         <p class="lead fw-normal mb-0 subtitle-slider">
-                            Productores de Aceitunas del Valle de Acarí, Arequipa.
+                            Productores de Aceitunas y Aceite de Oliva del Valle de Acarí, Arequipa.
                         </p>
                     </div>
                 </div>
@@ -92,7 +93,7 @@
         <div class="listado-productos" v-if="!showProduct">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="title-page">Productos Destacados</h2>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4">
                     <div class="col mb-5" v-for="product in products" :key="product.id">
                         <div class="card h-100">
                             <img :src="product.images" :alt="product.name">
@@ -136,8 +137,8 @@
                             <!-- <div class="small mb-1">SKU: BST-498</div> -->
                             <h1 class="title-producto">{{ selectedProduct.name }}</h1>
                             <div class="fs-5 mb-4">
-                                <span class="text-decoration-line-through">S/.50.00</span>
-                                <span class="precio-real">${{ selectedProduct.price }}</span>
+                                <span class="text-decoration-line-through">S/.{{ selectedProduct.pricePlus }}</span>
+                                <span class="precio-real">S/.{{ selectedProduct.price }}</span>
                             </div>
                             <ul class="data-producto">
                                 <li>Marca: <span>Oligume</span></li>
@@ -147,15 +148,54 @@
                                 <li>Pedido Min: <span> 1</span></li>
                                 <li>Disponibilidad: <span> Todo el año</span></li>
                             </ul>
-                            <a href="" class="btn mb-4 btn-contactar">Contactar Productor</a>
-                            <div class="d-flex">
-                                <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                                <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                    <i class="bi-cart-fill me-1"></i>
-                                    Agregar al carrito
-                                </button>
+                            <div class="box-cantidad mb-3">
+                                <span>Cantidad: </span>
+                                <input class="form-control text-center"  type="number"  v-model="cantidad" style="max-width: 4rem" />
                             </div>
-                            <pre>{{ selectedProduct}}</pre>
+                            <!-- <a href="" class="btn mb-4 btn-contactar"  @click="showContact">Contactar Productor</a> -->
+                            
+                            <div class="detalle-pedido mb-3">
+                                <p class="fw-bold">Detalle de Pedido</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="detalle-precio">
+                                            <div class="item">
+                                                <span>Precio total:</span> <span>S/ {{ precioTotal }}</span>
+                                            </div>
+                                            <div class="item">
+                                                <span>Descuento:</span> <span>- S/ 3.00</span>
+                                            </div>
+                                            <div class="item">
+                                                <span>Costo de Envio:</span> <span>S/ 0.00</span>
+                                            </div>
+                                            <hr>
+                                            <div class="item precio-final">
+                                                <span>Total a pagar:</span> <span class="total-pagar">S/ {{ precioFinal }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detalle-contacto mb-3">
+                                <p>Datos del Cliente:</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control"  id="nombre" v-model="nombre" placeholder="Nombre">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" id="celular" v-model="celular" placeholder="Celular" >
+                                    </div>
+                                </div>
+                               <!--  <div class="row mt-3">
+                                    <div class="col">
+                                        <textarea  class="form-control" name="" id="" rows="3" placeholder="Detalle Pedido" ></textarea>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                            <button class="btn mb-4 btn-contactar" @click="sendMessage" type="button"><i class="bi bi-whatsapp"></i> Contactar Productor</button>
+
+                            <pre class="d-none">{{ selectedProduct}}</pre>
                         </div>
                     </div>
                 </div>
@@ -313,25 +353,74 @@
     <script src="js/scripts.js"></script>
     <!-- Vue JS-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
         var app = new Vue({
             el: "#app",
             data: {
+                nombre:'',
+                celular: '',
+                cantidad: 1,
                 showProduct: false,
                 selectedProduct: null,
+                products: [],
                 products : [
-                    { id: 1, name: 'Aceite de Oliva 1 Lt', price: 48, images: './assets/aceite-litro.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 1' },
-                    { id: 2, name: 'Aceite de Oliva 1/2 Lt', price: 25, images: './assets/aceite-500ml.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 2' },
-                    { id: 3, name: 'Aceitunas Negras 1kg', price: 20, images: './assets/aceiguna-negra-kg.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 3' },
-                    { id: 4, name: 'Aceitunas Negras 1/2kg', price: 10, images: './assets/aceituna-negra-medio.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
+                    { id: 1, name: 'Aceite de Oliva 1/2 Lt', price: 25, pricePlus: 28, images: './assets/aceite-500ml.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 2' },
+                    { id: 2, name: 'Aceite de Oliva 1 Lt', price: 48, pricePlus: 50, images: './assets/aceite-litro.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 1' },
+                    { id: 3, name: 'Aceitunas Negras 1kg', price: 20, pricePlus: 22, images: './assets/aceiguna-negra-kg.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 3' },
+                    { id: 4, name: 'Aceitunas Negras 1/2kg', price: 10, pricePlus: 12, images: './assets/aceituna-negra-medio.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
+                    { id: 5, name: 'Aceitunas Verdes 1/2kg', price: 10, pricePlus: 12, images: './assets/aceituna-verde-medio.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
+                    { id: 6, name: 'Aceitunas Verdes 1/2kg', price: 20, pricePlus: 22, images: './assets/aceituna-verde-kg.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
                 ]
             },
+            mounted() {
+                // this.fetchProducts();
+            },
             methods: {
+                fetchProducts() {
+                    axios.get('https://oligume-jlcallalle.vercel.app/productos.json')
+                        .then(response => {
+                        this.products = response.data.products;
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener los productos:', error);
+                    });
+                },
                 // Método para mostrar el detalle de un producto
                 showDetail(product) {
-                    this.selectedProduct = product;
+                    this.selectedProduct = product; 
                     this.showProduct = true;
+                }, 
+                showContact() {
+                    console.log('prod' , this.selectedProduct);
+                },
+                sendMessage() {
+                    // Crear el mensaje con los datos del formulario
+                    //const mensaje = `Hola ${this.nombre}, tu número de celular es ${this.celular}.`;
+                    // const mensaje = `Hola *${this.nombre}*, tu pedido es: ${this.selectedProduct.name}. El Monto Total es: S/. ${this.precioFinal}`;
+                    const mensaje = `Hola, deseo estos productos de tu tienda.\n *Detalle del Pedido:* \n  Producto: ${this.selectedProduct.name}. \n Monto Total: S/. ${this.precioFinal}`;
+                    
+                    // URL de la API de WhatsApp
+                    const apiURL = 'https://api.whatsapp.com/send?';
+
+                    // Número de teléfono al que se enviará el mensaje (puedes cambiarlo según tus necesidades)
+                    const telefono = '934835047';
+
+                    // Construir el enlace completo
+                    const enlaceWhatsApp = `${apiURL}phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+
+                    // Abrir WhatsApp en una nueva ventana
+                    window.open(enlaceWhatsApp);
                 }
+            },
+            computed: {
+                precioTotal() {
+                    return this.cantidad * this.selectedProduct.price
+                },
+                precioFinal() {
+                    const dscto =  3;
+                    return this.precioTotal - dscto
+                },
             }
         });
         Vue.config.devtools = true;

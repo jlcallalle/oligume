@@ -12670,16 +12670,16 @@ a {
   /*   background-image: url(../assets/banner.jpg); */
   /* background-image: url(../assets/banner-producto.png); */
   /*  background-image: url(../assets/banner-aceitunas.jpg); */
-  background-image: url(../assets/home2.jpg);
-  height: 500px;
-  background-size: auto;
+  background-image: url(../assets/aceitunas-manos.png);
+  height: 450px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #DBDFE2;
   background-position: center center;
 }
 
-.box-slider {
-  height: 500px;
+.slider-oligume .box-slider {
+  height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12786,7 +12786,7 @@ a {
 }
 
 .title-slider {
-  color: var(--green-yellow);
+  color: white;
   font-size: 4.5rem;
 }
 
@@ -12795,8 +12795,7 @@ a {
 }
 
 .subtitle-slider {
-  background-color: gainsboro;
-  color: var(--green-yellow);
+  color: white;
   font-size: 2.5rem;
 }
 
@@ -12854,5 +12853,42 @@ a {
 
 .section-descripcion {
   padding-bottom: 2rem;
+}
+
+.box-cantidad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-cantidad span {
+  margin-right: 10px;
+}
+
+.btn-contactar i {
+  margin-right: 4px;
+}
+
+/* contacto detalle*/
+.detalle-contacto {
+  padding: 1.4rem 1.4rem 1.4rem;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+}
+
+.detalle-pedido {
+  padding: 1.4rem 1.4rem 1.4rem;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  max-width: 410px;
+}
+
+.total-pagar {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--green-light);
 }
 /*# sourceMappingURL=styles.css.map */

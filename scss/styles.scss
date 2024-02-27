@@ -10856,22 +10856,25 @@ a {
   // background-image: url(../assets/banner6.jpg);
   /* background-image: url(../assets/banner-producto.png); */
  /*  background-image: url(../assets/banner-aceitunas.jpg); */
-  background-image: url(../assets/home2.jpg);
-  height: 500px;
-  background-size: auto;
+  // background-image: url(../assets/home2.jpg);
+  background-image: url(../assets/aceitunas-manos.png);
+  height: 450px;
+  // background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #DBDFE2;
    background-position: center center;
  // background-position: 360px -150px;
+ .box-slider {
+    height: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-.box-slider {
-  height: 500px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
+
 .nav-item .nav-link {
   margin-right: 15px;
   font-weight: 600;
@@ -10964,15 +10967,15 @@ a {
 }
 
 .title-slider {
-  color: var(--green-yellow);
+  color: white;
   font-size: 4.5rem;
 }
 .box-subtitle {
   opacity: 0.8;
 }
 .subtitle-slider {
-  background-color: gainsboro;
-  color: var(--green-yellow);
+  // background-color: gainsboro;
+  color: white;
   font-size: 2.5rem;
 }
 
@@ -11030,4 +11033,40 @@ a {
 
 .section-descripcion {
   padding-bottom: 2rem;
+}
+
+.box-cantidad {
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: 10px;
+  }
+}
+
+.btn-contactar {
+  i {
+    margin-right: 4px;
+  }
+}
+
+/* contacto detalle*/
+
+.detalle-contacto {
+  padding: 1.4rem 1.4rem 1.4rem;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+}
+
+
+.detalle-pedido {
+  padding: 1.4rem 1.4rem 1.4rem;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  max-width: 410px;
+}
+
+.total-pagar {
+  font-size: 18px;
+  font-weight: bold;
+  color:var(--green-light);
 }
