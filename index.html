@@ -107,7 +107,7 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
-                                    <span>S/. {{ product.price }}</span>
+                                    <span class="price">S/. {{ product.price }}</span>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -137,7 +137,8 @@
                             <!-- <div class="small mb-1">SKU: BST-498</div> -->
                             <h1 class="title-producto">{{ selectedProduct.name }}</h1>
                             <div class="fs-5 mb-4">
-                                <span class="text-decoration-line-through">S/.{{ selectedProduct.pricePlus }}</span>
+                                <!-- <span class="text-decoration-line-through">S/.{{ selectedProduct.pricePlus }}</span> -->
+                                <span class="precio-online">Precio Online <span>
                                 <span class="precio-real">S/.{{ selectedProduct.price }}</span>
                             </div>
                             <ul class="data-producto">
@@ -160,10 +161,10 @@
                                     <div class="col">
                                         <div class="detalle-precio">
                                             <div class="item">
-                                                <span>Precio total:</span> <span>S/ {{ precioTotal }}</span>
+                                                <span>Subtotal:</span> <span>S/ {{ precioTotal }}</span>
                                             </div>
                                             <div class="item">
-                                                <span>Descuento:</span> <span>- S/ 3.00</span>
+                                                <span>Descuento:</span> <span>- S/ 2.00</span>
                                             </div>
                                             <div class="item">
                                                 <span>Costo de Envio:</span> <span>S/ 0.00</span>
@@ -364,14 +365,14 @@
                 showProduct: false,
                 selectedProduct: null,
                 products: [],
-                products : [
-                    { id: 1, name: 'Aceite de Oliva 1/2 Lt', price: 25, pricePlus: 28, images: './assets/aceite-500ml.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 2' },
-                    { id: 2, name: 'Aceite de Oliva 1 Lt', price: 48, pricePlus: 50, images: './assets/aceite-litro.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 1' },
+                /* products : [
+                    { id: 1, name: 'Aceite de Oliva 1/2 Lt', price: 26, pricePlus: 28, images: './assets/aceite-500ml.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 2' },
+                    { id: 2, name: 'Aceite de Oliva 1 Lt', price: 50, pricePlus: 50, images: './assets/aceite-litro.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 1' },
                     { id: 3, name: 'Aceitunas Negras 1kg', price: 20, pricePlus: 22, images: './assets/aceiguna-negra-kg.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 3' },
                     { id: 4, name: 'Aceitunas Negras 1/2kg', price: 10, pricePlus: 12, images: './assets/aceituna-negra-medio.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
                     { id: 5, name: 'Aceitunas Verdes 1/2kg', price: 10, pricePlus: 12, images: './assets/aceituna-verde-medio.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
                     { id: 6, name: 'Aceitunas Verdes 1/2kg', price: 20, pricePlus: 22, images: './assets/aceituna-verde-kg.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
-                ]
+                ] */
             },
             mounted() {
                 // this.fetchProducts();
@@ -398,7 +399,7 @@
                     // Crear el mensaje con los datos del formulario
                     //const mensaje = `Hola ${this.nombre}, tu número de celular es ${this.celular}.`;
                     // const mensaje = `Hola *${this.nombre}*, tu pedido es: ${this.selectedProduct.name}. El Monto Total es: S/. ${this.precioFinal}`;
-                    const mensaje = `Hola, deseo estos productos de tu tienda.\n *Detalle del Pedido:* \n  Producto: ${this.selectedProduct.name}. \n Monto Total: S/. ${this.precioFinal}`;
+                    const mensaje = `Hola 👋 deseo estos productos de tu tienda online.\n \n*¿Quién recibe el producto?:* \n *Nombre:* ${this.nombre}\n *Celular:* ${this.celular}\n \n*Detalle Pedido:* \n Producto: ${this.selectedProduct.name} \n Cantidad: ${this.cantidad} \n Subtotal: S/.${this.selectedProduct.price} \n Descuento: S/.2 \n *Total a pagar:* S/.${this.precioFinal} `;
                     
                     // URL de la API de WhatsApp
                     const apiURL = 'https://api.whatsapp.com/send?';
@@ -418,7 +419,7 @@
                     return this.cantidad * this.selectedProduct.price
                 },
                 precioFinal() {
-                    const dscto =  3;
+                    const dscto =  2;
                     return this.precioTotal - dscto
                 },
             }
