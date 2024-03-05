@@ -39,6 +39,7 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="premios.html">Premios</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
@@ -220,10 +221,10 @@
                                 {{ selectedProduct.description }}</p>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae necessitatibus ullam dolorem tempora et, ipsam commodi minus eius velit maxime molestiae cumque harum esse aliquid rerum distinctio quae doloribus officiis cum, officia, consectetur aut doloremque veniam. Incidunt dolor, voluptate fuga sapiente magni natus ad nam cumque ratione maiores doloremque.</p>
+                            <p>Conservar en un lugar fresco y protegido de la luz.</p>
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <p>Envío gratuito en España peninsular en pedidos a partir de 60€. Recibe tu pedido entre 3 y 5 días hábiles
+                            <p>Envío gratuito solo distritos seleccionados en Lima Norte.
                             </p>
                         </div>
                     </div>
@@ -375,7 +376,7 @@
                 ] */
             },
             mounted() {
-                // this.fetchProducts();
+                this.fetchProducts();
             },
             methods: {
                 fetchProducts() {

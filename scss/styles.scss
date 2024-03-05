@@ -10858,19 +10858,25 @@ a {
  /*  background-image: url(../assets/banner-aceitunas.jpg); */
   // background-image: url(../assets/home2.jpg);
   background-image: url(../assets/aceitunas-manos.png);
-  height: 450px;
+  height: 300px;
   // background-size: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #DBDFE2;
    background-position: center center;
  // background-position: 360px -150px;
- .box-slider {
+  @media (min-width: 768px) {
     height: 450px;
+  }
+ .box-slider {
+    height: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    @media (min-width: 768px) {
+      height: 450px;
+    }
   }
 }
 
@@ -10968,45 +10974,64 @@ a {
 
 .title-slider {
   color: white;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
+  @media (min-width: 768px) {
+    font-size: 4.5rem;
+  }
 }
 .box-subtitle {
   opacity: 0.8;
 }
 .subtitle-slider {
   // background-color: gainsboro;
+  text-align: center;
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 /* Detalle Producto */
 
 .producto-header {
   background-color: #f3f0e2;
-  padding: 48px;
+  padding: 28px;
+  @media (min-width: 768px) {
+    padding: 48px;
+  }
   h1 {
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 25px;
     line-height: 100%;
     letter-spacing: 3px;
     word-spacing: 5px;
     text-transform: uppercase;
     text-align: center;
     color: #333;
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
   }
 }
 
 .title-producto {
   font-family: "Rubik", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .producto-detalle {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @media (min-width: 768px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .precio-real {

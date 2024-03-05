@@ -12671,15 +12671,21 @@ a {
   /* background-image: url(../assets/banner-producto.png); */
   /*  background-image: url(../assets/banner-aceitunas.jpg); */
   background-image: url(../assets/aceitunas-manos.png);
-  height: 450px;
+  height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #DBDFE2;
   background-position: center center;
 }
 
+@media (min-width: 768px) {
+  .slider-oligume {
+    height: 450px;
+  }
+}
+
 .slider-oligume .box-slider {
-  height: 450px;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12693,6 +12699,12 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .slider-oligume .box-slider {
+    height: 450px;
+  }
 }
 
 .nav-item .nav-link {
@@ -12787,7 +12799,13 @@ a {
 
 .title-slider {
   color: white;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .title-slider {
+    font-size: 4.5rem;
+  }
 }
 
 .box-subtitle {
@@ -12795,20 +12813,33 @@ a {
 }
 
 .subtitle-slider {
+  text-align: center;
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .subtitle-slider {
+    font-size: 2.5rem;
+  }
 }
 
 /* Detalle Producto */
 .producto-header {
   background-color: #f3f0e2;
-  padding: 48px;
+  padding: 28px;
+}
+
+@media (min-width: 768px) {
+  .producto-header {
+    padding: 48px;
+  }
 }
 
 .producto-header h1 {
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 100%;
   letter-spacing: 3px;
   word-spacing: 5px;
@@ -12817,15 +12848,34 @@ a {
   color: #333;
 }
 
+@media (min-width: 768px) {
+  .producto-header h1 {
+    font-size: 40px;
+  }
+}
+
 .title-producto {
   font-family: "Rubik", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
+@media (min-width: 768px) {
+  .title-producto {
+    font-size: 2.5rem;
+  }
+}
+
 .producto-detalle {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .producto-detalle {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .precio-real {
