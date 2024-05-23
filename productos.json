@@ -7,7 +7,7 @@
       "pricePlus": 28,
       "images": "./assets/aceite-500ml.png",
       "type": "Aceite de Oliva Extra Virgen",
-      "description": "Descripción del producto 2"
+      "description": "Descripción del producto Aceite"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "pricePlus": 55,
       "images": "./assets/aceite-litro.png",
       "type": "Aceite de Oliva Extra Virgen",
-      "description": "Descripción del producto 1"
+      "description": "Descripción del producto Aceite"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "pricePlus": 22,
       "images": "./assets/aceiguna-negra-kg.jpg",
       "type": "Aceitunas Selectas",
-      "description": "Descripción del producto 3"
+      "description": "Descripción del producto Aceituna"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "pricePlus": 12,
       "images": "./assets/aceituna-negra-medio.jpg",
       "type": "Aceitunas Selectas",
-      "description": "Descripción del producto 4"
+      "description": "Descripción del producto aceituna"
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "pricePlus": 12,
       "images": "./assets/aceituna-verde-medio.jpg",
       "type": "Aceitunas Selectas",
-      "description": "Descripción del producto 4"
+      "description": "Descripción del producto aceituna"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "pricePlus": 22,
       "images": "./assets/aceituna-verde-kg.jpg",
       "type": "Aceitunas Selectas",
-      "description": "Descripción del producto 4"
+      "description": "Descripción del producto aceituna"
     }
   ]
 }

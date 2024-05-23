@@ -12754,9 +12754,15 @@ a {
 .title-page {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 25px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title-page {
+    font-size: 35px;
+  }
 }
 
 .btn-green {
@@ -12798,8 +12804,13 @@ a {
 }
 
 .listado-productos {
-  padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .listado-productos {
+    padding-top: 3rem;
+  }
 }
 
 .title-slider {
@@ -12938,7 +12949,12 @@ a {
   padding: 1.4rem 1.4rem 1.4rem;
   border: 1px solid #D9D9D9;
   border-radius: 10px;
-  max-width: 410px;
+}
+
+@media (min-width: 768px) {
+  .detalle-pedido {
+    max-width: 410px;
+  }
 }
 
 .total-pagar {

@@ -135,11 +135,11 @@
         <div class="listado-productos" v-if="!showProduct">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="title-page">Productos Destacados</h2>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4">
+                <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4">
                     <div class="col mb-5" v-for="product in products" :key="product.id">
                         <div class="card h-100">
                             <img :src="product.images" :alt="product.name">
-                            <div class="card-body p-4">
+                            <div class="card-body p-2 p-md-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder"> {{ product.name }} </h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
@@ -173,7 +173,7 @@
                 <div class="container">
                     <div class="row gx-4 gx-lg-5 align-items-center">
                         <div class="col-md-6">
-                            <img class="card-img-top mb-5 mb-md-0" :src="selectedProduct.images">
+                            <img class="card-img-top mb-md-0" :src="selectedProduct.images">
                         </div>
                         <div class="col-md-6">
                             <!-- <div class="small mb-1">SKU: BST-498</div> -->
@@ -271,7 +271,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productos-relacionados py-5 bg-light">
+            <div class="productos-relacionados py-5 bg-light d-none">
                 <div class="container px-4 px-lg-5 mt-5">
                     <h2 class="fw-bolder mb-4">Productos Relacionados</h2>
                     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -280,7 +280,7 @@
                                 <!-- Product image-->
                                 <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                                 <!-- Product details-->
-                                <div class="card-body p-4">
+                                <div class="card-body p-2 p-md-4">
                                     <div class="text-center">
                                         <!-- Product name-->
                                         <h5 class="fw-bolder">Fancy Product</h5>
@@ -301,7 +301,7 @@
                                 <!-- Product image-->
                                 <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                                 <!-- Product details-->
-                                <div class="card-body p-4">
+                                <div class="card-body p-2 p-md-4">
                                     <div class="text-center">
                                         <!-- Product name-->
                                         <h5 class="fw-bolder">Special Item</h5>
@@ -331,7 +331,7 @@
                                 <!-- Product image-->
                                 <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                                 <!-- Product details-->
-                                <div class="card-body p-4">
+                                <div class="card-body p-2 p-md-4">
                                     <div class="text-center">
                                         <!-- Product name-->
                                         <h5 class="fw-bolder">Sale Item</h5>
@@ -351,7 +351,7 @@
                                 <!-- Product image-->
                                 <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                                 <!-- Product details-->
-                                <div class="card-body p-4">
+                                <div class="card-body p-2 p-md-4">
                                     <div class="text-center">
                                         <!-- Product name-->
                                         <h5 class="fw-bolder">Popular Item</h5>
@@ -383,7 +383,7 @@
     <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">
-                Copyright &copy; Your Website 2024
+                Copyright &copy; Oligume SAC, 2024
             </p>
         </div>
     </footer>
