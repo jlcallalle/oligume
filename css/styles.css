@@ -12670,7 +12670,7 @@ a {
   /*   background-image: url(../assets/banner.jpg); */
   /* background-image: url(../assets/banner-producto.png); */
   /*  background-image: url(../assets/banner-aceitunas.jpg); */
-  background-image: url(../assets/aceitunas-manos.png);
+  background-image: url(../assets/portada1.jpg);
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12705,6 +12705,11 @@ a {
   .slider-oligume .box-slider {
     height: 450px;
   }
+}
+
+.oligume-slider {
+  /* height: 450px;
+  overflow: hidden; */
 }
 
 .nav-item .nav-link {
@@ -12940,5 +12945,17 @@ a {
   font-size: 18px;
   font-weight: bold;
   color: var(--green-light);
+}
+
+.img-aove {
+  background-image: url(../assets/aove.jpg);
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.section-contacto .form-group {
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */

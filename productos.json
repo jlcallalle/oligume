@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Aceite de Oliva 1/2 Lt",
-      "price": 26,
+      "price": 28,
       "pricePlus": 28,
       "images": "./assets/aceite-500ml.png",
       "type": "Aceite de Oliva Extra Virgen",
@@ -12,8 +12,8 @@
     {
       "id": 2,
       "name": "Aceite de Oliva 1 Lt",
-      "price": 50,
-      "pricePlus": 50,
+      "price": 55,
+      "pricePlus": 55,
       "images": "./assets/aceite-litro.png",
       "type": "Aceite de Oliva Extra Virgen",
       "description": "Descripción del producto 1"
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "name": "Aceitunas Negras 1kg",
-      "price": 20,
+      "price": 22,
       "pricePlus": 22,
       "images": "./assets/aceiguna-negra-kg.jpg",
       "type": "Aceitunas Selectas",
@@ -30,7 +30,7 @@
     {
       "id": 4,
       "name": "Aceitunas Negras 1/2kg",
-      "price": 10,
+      "price": 12,
       "pricePlus": 12,
       "images": "./assets/aceituna-negra-medio.jpg",
       "type": "Aceitunas Selectas",
@@ -39,7 +39,7 @@
     {
       "id": 5,
       "name": "Aceitunas Verdes 1/2kg",
-      "price": 10,
+      "price": 12,
       "pricePlus": 12,
       "images": "./assets/aceituna-verde-medio.jpg",
       "type": "Aceitunas Selectas",
@@ -48,7 +48,7 @@
     {
       "id": 6,
       "name": "Aceitunas Verdes 1/2kg",
-      "price": 20,
+      "price": 22,
       "pricePlus": 22,
       "images": "./assets/aceituna-verde-kg.jpg",
       "type": "Aceitunas Selectas",
