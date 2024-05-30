@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Oligume</title>
@@ -11,13 +11,14 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-    </style>
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
+    <!-- Swiper slider-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/shopio/1-1/vendor/swiper/swiper-bundle.min.css">
+      <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTK6HS40EB"></script>
 <script>
@@ -74,64 +75,45 @@
                     <a class="social-icon" href="https://wa.me/51934835047" target="_blank">
                         <i class="bi bi-whatsapp"></i></a>
                 </div>
-                <!-- <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form> -->
             </div>
         </div>
     </nav>
-    <!-- Header-->
+   
   
     <div id="app">
         <p class="d-none"> {{ products }}</p>
-        <!-- <header class="slider-oligume" v-if="!showProduct">
-            <div class="container px-4">
-                <div class="box-slider">
-                    <h1 class="display-4 fw-bolder title-slider d-none">OLIGUME</h1>
-                    <div class="box-subtitle">
-                        <p class="lead fw-normal mb-0 subtitle-slider d-none">
-                            Productores de Aceitunas y Aceite de Oliva del Valle de Acarí, Arequipa.
-                        </p>
+
+        <!-- Hero slider-->
+        <section v-if="!showProduct">
+            <div class="swiper-container" id="hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero bg-center bg-cover d-flex align-items-center" style="background: url(/assets/portada1.jpg)">
+                <div class="container">
+                    <div class="row text-lg-center">
                     </div>
                 </div>
+                </div>
+                <div class="swiper-slide hero bg-center bg-cover d-flex align-items-center" style="background: url(/assets/banner-aceitunas.jpg)">
+                <div class="container">
+                    <div class="row text-lg-center">
+                    <div class="col-lg-8">
+                        <h1 class="hero-heading line-height-sm mb-2 title" data-swiper-parallax="-200">Somos Productores de Aceitunas</h1>
+                        <div class="row">
+                        <div class="col-lg-6 mx-auto">
+                            <h2 class="font-weight mb-4 mt-3 subtitle" data-swiper-parallax="-400">Del Valle de Acarí, Arequipa</h2>
+                        </div>
+                        </div>
+                        <!-- <a class="btn btn-primary text" href="shop.html" data-swiper-parallax="-600"> <i class="fas fa-shopping-bag me-2"></i>Shop now</a> -->
+                    </div>
+                    </div>
+                </div>
+                </div>
             </div>
-        </header> -->
-
-        <div id="myCarousel" class="carousel slide oligume-slider" data-bs-ride="carousel"  v-if="!showProduct">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <div class="swiper-pagination px-4 py-2 text-end h5 font-weight-light"></div>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/portada1.jpg" alt="First slide">
-        
-                <!-- <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Example headline.</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                  </div>
-                </div> -->
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="assets/portada4.jpg" alt="First slide">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
+        </section>
+        <!-- New arrivals-->
+   
         <div class="listado-productos" v-if="!showProduct">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="title-page">Productos Destacados</h2>
@@ -379,22 +361,166 @@
         </div>
     </div>
 
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">
-                Copyright &copy; Oligume SAC, 2024
-            </p>
+     <!-- Newsletter section-->
+     <section class="pb-5">
+        <div class="container p-5 bg-light">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">           
+              <h3>Obtén un <span class="text-success">10% </span>de descuento</h3>
+              <p class="text-small text-muted mb-0">Registrate al Newsletter y obtén el descuento en tu primera compra.</p>
+            </div>
+            <div class="col-lg-6">
+              <form action="#">
+                <div class="input-group">
+                  <input class="form-control rounded-0" type="text" placeholder="Ingresa tu email" aria-label="Ingresa tu email" aria-describedby="button-addon2">
+                  <button class="btn btn-success" id="button-addon2" type="button">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-    </footer>
+      </section>
 
+      <!-- Features-->
+      <section>
+        <div class="container pb-5">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="d-flex align-items-center p-4 w-100">
+                <svg class="svg-icon text-success">
+                  <use xlink:href="#delivery-time-1"> </use>
+                </svg>
+                <div class="ms-3">
+                  <h6 class="mb-1 text-uppercase">Delivery Gratis </h6>
+                  <p class="small text-muted mb-0">Para distritos seleccionados.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="d-flex align-items-center p-4 w-100">
+                <svg class="svg-icon text-success">
+                  <use xlink:href="#pay-1"> </use>
+                </svg>
+                <div class="ms-3">
+                  <h6 class="mb-1 text-uppercase">Garantía </h6>
+                  <p class="small text-muted mb-0">Contamos con certificados BPA y Fundo Verde</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="d-flex align-items-center p-4 w-100">
+                <svg class="svg-icon text-success">
+                  <use xlink:href="#credit-card-1"> </use>
+                </svg>
+                <div class="ms-3">
+                  <h6 class="mb-1 text-uppercase">Pago Seguro</h6>
+                  <p class="small text-muted mb-0">Pago 100% seguro</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="d-flex align-items-center p-4 w-100">
+                <svg class="svg-icon text-success">
+                  <use xlink:href="#helpline-24h-1"> </use>
+                </svg>
+                <div class="ms-3">
+                  <h6 class="mb-1 text-uppercase">SOPORTE 24/7</h6>
+                  <p class="small text-muted mb-0">Atenció al cliente</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer-->
+     <footer class="bg-dark">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 mb-3 mb-md-0"><img class="img-fluid mb-3" src="assets/oligume.png" alt="Patrol" width="110">
+              <ul class="lista-tarjeta list-inline">
+                <li class="list-inline-item"><i class="fab fa-cc-visa text-gray"></i></li>
+                <li class="list-inline-item"><i class="fab fa-cc-mastercard text-gray"></i></li>
+                <li class="list-inline-item"><i class="fab fa-cc-discover text-gray"></i></li>
+                <li class="list-inline-item"><i class="fab fa-cc-paypal text-gray"></i></li>
+                <li class="list-inline-item"><i class="fab fa-cc-amex text-gray"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
+              <h6 class="text-white">Menu</h6>
+              <ul class="lista-menu list-unstyled mb-0">
+                <li class="mb-2"> <a class="reset-anchor" href="index.html">Inicio</a></li>
+                <li class="mb-2"><a class="reset-anchor" href="nosotros.html">Nosotros</a></li>
+                <li class="mb-2"><a class="reset-anchor" href="reconocimiento.html">Reconocimientos</a></li>
+                <li class="mb-2"><a class="reset-anchor" href="contacto.html">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
+              <h6 class="text-white">Checkout</h6>
+              <ul class="lista-menu list-unstyled mb-0">
+                <li class="mb-2"> <a class="reset-anchor" href="#">Mi cuenta</a></li>
+                <li class="mb-2"> <a class="reset-anchor" href="#">Checkout</a></li>
+                <li class="mb-2"> <a class="reset-anchor" href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
+              <p class="lead mb-1 text-white"><a class="reset-anchor text-white" href="tel:+51 934 835 047"> <i class="fab fab fa-whatsapp"></i> 934 835 047</a></p>
+              <p class="text-muted">Lima, Perú</p>
+              <ul class="lista-social list-inline mb-0">
+                <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-youtube"></i></a></li>
+                <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="border-top py-4" style="border-color: #1d1d1d !important">
+            <div class="row">
+              <div class="col-lg-12">
+                <p class="small text-muted mb-0 text-center">© 2024 All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+     </footer>
 
     
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://d19m59y37dris4.cloudfront.net/shopio/1-1/vendor/swiper/swiper-bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- Vue JS-->
+    <script>
+        // ------------------------------------------------------- //
+        //   Inject SVG Sprite - 
+        //   see more here 
+        //   https://css-tricks.com/ajaxing-svg-sprite/
+        // ------------------------------------------------------ //
+        function injectSvgSprite(path) {
+        
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function(e) {
+            var div = document.createElement("div");
+            div.className = 'd-none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+        // this is set to BootstrapTemple website as you cannot 
+        // inject local SVG sprite (using only 'icons/orion-svg-sprite.40382315.svg' path)
+        // while using file:// protocol
+        // pls don't forget to change to your domain :)
+        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+        
+      </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+   <!-- Vue JS-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>

@@ -1,0 +1,24 @@
+/* BASE */
+
+:root {
+    --gray-text: #333333;
+    --green-light: #8bc34a;
+    --green-dark: #4A642F;
+    --green-yellow: #7f7a5d;
+    --bs-link-color:#333333;
+    --bs-link-hover-color: #8bc34a;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    color: var(--gray-text);
+  }
+  
+  a {
+    color: var(--gray-text);
+  }
+  
+  .logo-grand  {
+    max-height: 85px;
+  }
+

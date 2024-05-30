@@ -1,7 +1,28 @@
-/*!
-* Start Bootstrap - Shop Homepage v5.0.6 (https://startbootstrap.com/template/shop-homepage)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+document.addEventListener("DOMContentLoaded", function () {
+    /* ==============================================
+       HERO SLIDER
+    ============================================== */
+    var heroSlider = new Swiper("#hero-slider", {
+        parallax: true,
+        speed: 2000,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "custom",
+            renderCustom: function (swiper, current, total) {
+                return (
+                    ' <span class="h2">' +
+                    ("0" + current).slice(-2) +
+                    "</span> " +
+                    ' <span class="swiper-divider">/</span> ' +
+                    ' <span class="text-muted">' +
+                    ("0" + total).slice(-2)
+                );
+                +"</span> ";
+            },
+        },
+    });
+});
