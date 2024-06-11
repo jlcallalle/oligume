@@ -3,29 +3,32 @@
     {
       "id": 1,
       "name": "Aceite de Oliva 1/2 Lt",
-      "price": 28,
-      "pricePlus": 28,
+      "price": 30,
+      "pricePlus": 30,
       "images": "./assets/aceite-500ml.png",
       "type": "Aceite de Oliva Extra Virgen",
-      "description": "Descripción del producto Aceite"
+      "presentacion": "Botella de vidrio verde oscuro",
+      "description": "Descripción del producto Aceite, Prensado en Frio, 0.3% de Acidez."
     },
     {
       "id": 2,
       "name": "Aceite de Oliva 1 Lt",
-      "price": 55,
-      "pricePlus": 55,
+      "price": 60,
+      "pricePlus": 60,
       "images": "./assets/aceite-litro.png",
       "type": "Aceite de Oliva Extra Virgen",
-      "description": "Descripción del producto Aceite"
+      "presentacion": "Botella de vidrio verde oscuro",
+      "description": "Descripción del producto Aceite, Prensado en Frio, 0.3% de Acidez."
     },
     {
       "id": 3,
       "name": "Aceitunas Negras 1kg",
-      "price": 22,
-      "pricePlus": 22,
+      "price": 24,
+      "pricePlus": 24,
       "images": "./assets/aceiguna-negra-kg.jpg",
       "type": "Aceitunas Selectas",
-      "description": "Descripción del producto Aceituna"
+      "presentacion": "Bolsa Polietileno",
+      "description": "Aceitunas Selectas en salmuera."
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "pricePlus": 12,
       "images": "./assets/aceituna-negra-medio.jpg",
       "type": "Aceitunas Selectas",
-      "description": "Descripción del producto aceituna"
+      "presentacion": "Bolsa Polietileno",
+      "description": "Aceitunas Selectas en salmuera."
     },
     {
       "id": 5,
@@ -43,16 +47,18 @@
       "pricePlus": 12,
       "images": "./assets/aceituna-verde-medio.jpg",
       "type": "Aceitunas Selectas",
-      "description": "Descripción del producto aceituna"
+      "presentacion": "Bolsa Polietileno",
+      "description": "Aceitunas Selectas en salmuera."
     },
     {
       "id": 6,
       "name": "Aceitunas Verdes 1/2kg",
-      "price": 22,
-      "pricePlus": 22,
+      "price": 24,
+      "pricePlus": 24,
       "images": "./assets/aceituna-verde-kg.jpg",
       "type": "Aceitunas Selectas",
-      "description": "Descripción del producto aceituna"
+      "presentacion": "Bolsa Polietileno",
+      "description": "Aceitunas Selectas en salmuera."
     }
   ]
 }

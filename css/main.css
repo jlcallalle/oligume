@@ -11666,4 +11666,10 @@ a {
   text-decoration: none;
 }
 
+
+#myTabContent > div p {
+  padding: 20px;
+}
+
 /*# sourceMappingURL=main.css.map */
+

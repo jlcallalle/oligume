@@ -12,21 +12,22 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
     <!-- Swiper slider-->
     <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/shopio/1-1/vendor/swiper/swiper-bundle.min.css">
-      <!-- Custom stylesheet - for your changes-->
+    <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTK6HS40EB"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-PTK6HS40EB');
+    gtag('config', 'G-PTK6HS40EB');
 </script>
 
 <body>
@@ -78,42 +79,46 @@
             </div>
         </div>
     </nav>
-   
-  
+
+
     <div id="app">
         <p class="d-none"> {{ products }}</p>
 
         <!-- Hero slider-->
         <section v-if="!showProduct">
             <div class="swiper-container" id="hero-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide hero bg-center bg-cover d-flex align-items-center" style="background: url(/assets/portada1.jpg)">
-                <div class="container">
-                    <div class="row text-lg-center">
-                    </div>
-                </div>
-                </div>
-                <div class="swiper-slide hero bg-center bg-cover d-flex align-items-center" style="background: url(/assets/banner-aceitunas.jpg)">
-                <div class="container">
-                    <div class="row text-lg-center">
-                    <div class="col-lg-8">
-                        <h1 class="hero-heading line-height-sm mb-2 title" data-swiper-parallax="-200">Somos Productores de Aceitunas</h1>
-                        <div class="row">
-                        <div class="col-lg-6 mx-auto">
-                            <h2 class="font-weight mb-4 mt-3 subtitle" data-swiper-parallax="-400">Del Valle de Acarí, Arequipa</h2>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hero bg-center bg-cover d-flex align-items-center"
+                        style="background: url(/assets/portada1.jpg)">
+                        <div class="container">
+                            <div class="row text-lg-center">
+                            </div>
                         </div>
+                    </div>
+                    <div class="swiper-slide hero bg-center bg-cover d-flex align-items-center"
+                        style="background: url(/assets/banner-aceitunas.jpg)">
+                        <div class="container">
+                            <div class="row text-lg-center">
+                                <div class="col-lg-8">
+                                    <h1 class="hero-heading line-height-sm mb-2 title" data-swiper-parallax="-200">Somos
+                                        Productores de Aceitunas</h1>
+                                    <div class="row">
+                                        <div class="col-lg-6 mx-auto">
+                                            <h2 class="font-weight mb-4 mt-3 subtitle" data-swiper-parallax="-400">Del
+                                                Valle de Acarí, Arequipa</h2>
+                                        </div>
+                                    </div>
+                                    <!-- <a class="btn btn-primary text" href="shop.html" data-swiper-parallax="-600"> <i class="fas fa-shopping-bag me-2"></i>Shop now</a> -->
+                                </div>
+                            </div>
                         </div>
-                        <!-- <a class="btn btn-primary text" href="shop.html" data-swiper-parallax="-600"> <i class="fas fa-shopping-bag me-2"></i>Shop now</a> -->
-                    </div>
                     </div>
                 </div>
-                </div>
-            </div>
-            <div class="swiper-pagination px-4 py-2 text-end h5 font-weight-light"></div>
+                <div class="swiper-pagination px-4 py-2 text-end h5 font-weight-light"></div>
             </div>
         </section>
         <!-- New arrivals-->
-   
+
         <div class="listado-productos" v-if="!showProduct">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="title-page">Productos Destacados</h2>
@@ -162,23 +167,24 @@
                             <h1 class="title-producto">{{ selectedProduct.name }}</h1>
                             <div class="fs-5 mb-4">
                                 <!-- <span class="text-decoration-line-through">S/.{{ selectedProduct.pricePlus }}</span> -->
-                                <span class="precio-online">Precio:  <span>
-                                <span class="precio-real">S/.{{ selectedProduct.price }}</span>
+                                <span class="precio-online">Precio: <span>
+                                        <span class="precio-real">S/.{{ selectedProduct.price }}</span>
                             </div>
                             <ul class="data-producto">
                                 <li>Marca: <span>Oligume</span></li>
                                 <li>Región: <span>AREQUIPA</span></li>
-                                <li>Presentación: <span> Botella de vidrio verde oscuro</span></li>
+                                <li>Presentación: <span> {{ selectedProduct.presentacion}}</span></li>
                                 <!-- <li>Peso <span>1 Litro</span></li> -->
-                               <!--  <li>Pedido Min: <span> 1</span></li> -->
+                                <!--  <li>Pedido Min: <span> 1</span></li> -->
                                 <!-- <li>Disponibilidad: <span> Todo el año</span></li> -->
                             </ul>
                             <div class="box-cantidad mb-3">
                                 <span>Cantidad: </span>
-                                <input class="form-control text-center"  type="number"  v-model="cantidad" style="max-width: 4rem" />
+                                <input class="form-control text-center" type="number" v-model="cantidad"
+                                    style="max-width: 4rem" />
                             </div>
                             <!-- <a href="" class="btn mb-4 btn-contactar"  @click="showContact">Contactar Productor</a> -->
-                            
+
                             <div class="detalle-pedido mb-3">
                                 <p class="fw-bold">Detalle de Pedido</p>
                                 <div class="row">
@@ -190,12 +196,13 @@
                                             <!-- <div class="item">
                                                 <span>Descuento:</span> <span>- S/ 2.00</span>
                                             </div> -->
-                                           <!--  <div class="item">
+                                            <!--  <div class="item">
                                                 <span>Costo de Envio:</span> <span>S/ 0.00</span>
                                             </div> -->
                                             <hr>
                                             <div class="item precio-final">
-                                                <span>Total a pagar:</span> <span class="total-pagar">S/ {{ precioFinal }}</span>
+                                                <span>Total a pagar:</span> <span class="total-pagar">S/ {{ precioFinal
+                                                    }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -205,20 +212,23 @@
                                 <p>Datos del Cliente:</p>
                                 <div class="row">
                                     <div class="col">
-                                        <input type="text" class="form-control"  id="nombre" v-model="nombre" placeholder="Nombre">
+                                        <input type="text" class="form-control" id="nombre" v-model="nombre"
+                                            placeholder="Nombre">
                                     </div>
                                     <div class="col">
-                                        <input type="text" class="form-control" id="celular" v-model="celular" placeholder="Celular" >
+                                        <input type="text" class="form-control" id="celular" v-model="celular"
+                                            placeholder="Celular">
                                     </div>
                                 </div>
-                               <!--  <div class="row mt-3">
+                                <!--  <div class="row mt-3">
                                     <div class="col">
                                         <textarea  class="form-control" name="" id="" rows="3" placeholder="Detalle Pedido" ></textarea>
                                     </div>
                                 </div> -->
                             </div>
 
-                            <button class="btn mb-4 btn-contactar" @click="sendMessage" type="button"><i class="bi bi-whatsapp"></i> Contactar Productor</button>
+                            <button class="btn mb-4 btn-contactar" @click="sendMessage" type="button"><i
+                                    class="bi bi-whatsapp"></i> Contactar Productor</button>
 
                             <pre class="d-none">{{ selectedProduct}}</pre>
                         </div>
@@ -229,25 +239,30 @@
                 <div class="container">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Descripción</button>
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">Descripción</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Detalle de Producto</button>
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">Detalle de
+                                Producto</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Información de Envio</button>
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                                type="button" role="tab" aria-controls="contact" aria-selected="false">Información de
+                                Envio</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <p> 
+                            <p>
                                 {{ selectedProduct.description }}</p>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <p>Conservar en un lugar fresco y protegido de la luz.</p>
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <p>Envío gratuito solo distritos seleccionados en Lima Norte.
+                            <p>Envío a distritos de Lima y Provincias.
                             </p>
                         </div>
                     </div>
@@ -260,7 +275,8 @@
                         <div class="col mb-5">
                             <div class="card h-100">
                                 <!-- Product image-->
-                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                    alt="..." />
                                 <!-- Product details-->
                                 <div class="card-body p-2 p-md-4">
                                     <div class="text-center">
@@ -272,16 +288,19 @@
                                 </div>
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View
+                                            options</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col mb-5">
                             <div class="card h-100">
                                 <!-- Sale badge-->
-                                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                                <div class="badge bg-dark text-white position-absolute"
+                                    style="top: 0.5rem; right: 0.5rem">Sale</div>
                                 <!-- Product image-->
-                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                    alt="..." />
                                 <!-- Product details-->
                                 <div class="card-body p-2 p-md-4">
                                     <div class="text-center">
@@ -302,16 +321,19 @@
                                 </div>
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
+                                            cart</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col mb-5">
                             <div class="card h-100">
                                 <!-- Sale badge-->
-                                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                                <div class="badge bg-dark text-white position-absolute"
+                                    style="top: 0.5rem; right: 0.5rem">Sale</div>
                                 <!-- Product image-->
-                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                    alt="..." />
                                 <!-- Product details-->
                                 <div class="card-body p-2 p-md-4">
                                     <div class="text-center">
@@ -324,14 +346,16 @@
                                 </div>
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
+                                            cart</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col mb-5">
                             <div class="card h-100">
                                 <!-- Product image-->
-                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                    alt="..." />
                                 <!-- Product details-->
                                 <div class="card-body p-2 p-md-4">
                                     <div class="text-center">
@@ -351,7 +375,8 @@
                                 </div>
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
+                                            cart</a></div>
                                 </div>
                             </div>
                         </div>
@@ -361,132 +386,140 @@
         </div>
     </div>
 
-     <!-- Newsletter section-->
-     <section class="pb-5">
+    <!-- Newsletter section-->
+    <section class="pb-5">
         <div class="container p-5 bg-light">
-          <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">           
-              <h3>Obtén un <span class="text-success">10% </span>de descuento</h3>
-              <p class="text-small text-muted mb-0">Registrate al Newsletter y obtén el descuento en tu primera compra.</p>
-            </div>
-            <div class="col-lg-6">
-              <form action="#">
-                <div class="input-group">
-                  <input class="form-control rounded-0" type="text" placeholder="Ingresa tu email" aria-label="Ingresa tu email" aria-describedby="button-addon2">
-                  <button class="btn btn-success" id="button-addon2" type="button">Subscribe</button>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Obtén un <span class="text-success">10% </span>de descuento</h3>
+                    <p class="text-small text-muted mb-0">Registrate al Newsletter y obtén el descuento en tu primera
+                        compra.</p>
                 </div>
-              </form>
+                <div class="col-lg-6">
+                    <form action="#">
+                        <div class="input-group">
+                            <input class="form-control rounded-0" type="text" placeholder="Ingresa tu email"
+                                aria-label="Ingresa tu email" aria-describedby="button-addon2">
+                            <button class="btn btn-success" id="button-addon2" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Features-->
-      <section>
+    <!-- Features-->
+    <section>
         <div class="container pb-5">
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <div class="d-flex align-items-center p-4 w-100">
-                <svg class="svg-icon text-success">
-                  <use xlink:href="#delivery-time-1"> </use>
-                </svg>
-                <div class="ms-3">
-                  <h6 class="mb-1 text-uppercase">Delivery Gratis </h6>
-                  <p class="small text-muted mb-0">Para distritos seleccionados.</p>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex align-items-center p-4 w-100">
+                        <svg class="svg-icon text-success">
+                            <use xlink:href="#delivery-time-1"> </use>
+                        </svg>
+                        <div class="ms-3">
+                            <h6 class="mb-1 text-uppercase">Delivery Gratis </h6>
+                            <p class="small text-muted mb-0">Para distritos seleccionados.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="d-flex align-items-center p-4 w-100">
-                <svg class="svg-icon text-success">
-                  <use xlink:href="#pay-1"> </use>
-                </svg>
-                <div class="ms-3">
-                  <h6 class="mb-1 text-uppercase">Garantía </h6>
-                  <p class="small text-muted mb-0">Contamos con certificados BPA y Fundo Verde</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex align-items-center p-4 w-100">
+                        <svg class="svg-icon text-success">
+                            <use xlink:href="#pay-1"> </use>
+                        </svg>
+                        <div class="ms-3">
+                            <h6 class="mb-1 text-uppercase">Garantía </h6>
+                            <p class="small text-muted mb-0">Contamos con certificados BPA y Fundo Verde</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="d-flex align-items-center p-4 w-100">
-                <svg class="svg-icon text-success">
-                  <use xlink:href="#credit-card-1"> </use>
-                </svg>
-                <div class="ms-3">
-                  <h6 class="mb-1 text-uppercase">Pago Seguro</h6>
-                  <p class="small text-muted mb-0">Pago 100% seguro</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex align-items-center p-4 w-100">
+                        <svg class="svg-icon text-success">
+                            <use xlink:href="#credit-card-1"> </use>
+                        </svg>
+                        <div class="ms-3">
+                            <h6 class="mb-1 text-uppercase">Pago Seguro</h6>
+                            <p class="small text-muted mb-0">Pago 100% seguro</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="d-flex align-items-center p-4 w-100">
-                <svg class="svg-icon text-success">
-                  <use xlink:href="#helpline-24h-1"> </use>
-                </svg>
-                <div class="ms-3">
-                  <h6 class="mb-1 text-uppercase">SOPORTE 24/7</h6>
-                  <p class="small text-muted mb-0">Atenció al cliente</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex align-items-center p-4 w-100">
+                        <svg class="svg-icon text-success">
+                            <use xlink:href="#helpline-24h-1"> </use>
+                        </svg>
+                        <div class="ms-3">
+                            <h6 class="mb-1 text-uppercase">SOPORTE 24/7</h6>
+                            <p class="small text-muted mb-0">Atenció al cliente</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
     <!-- Footer-->
-     <footer class="bg-dark">
+    <footer class="bg-dark">
         <div class="container py-5">
-          <div class="row">
-            <div class="col-md-4 col-sm-12 mb-3 mb-md-0"><img class="img-fluid mb-3" src="assets/oligume.png" alt="Patrol" width="110">
-              <ul class="lista-tarjeta list-inline">
-                <li class="list-inline-item"><i class="fab fa-cc-visa text-gray"></i></li>
-                <li class="list-inline-item"><i class="fab fa-cc-mastercard text-gray"></i></li>
-                <li class="list-inline-item"><i class="fab fa-cc-discover text-gray"></i></li>
-                <li class="list-inline-item"><i class="fab fa-cc-paypal text-gray"></i></li>
-                <li class="list-inline-item"><i class="fab fa-cc-amex text-gray"></i></li>
-              </ul>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 mb-3 mb-md-0"><img class="img-fluid mb-3" src="assets/oligume.png"
+                        alt="Patrol" width="110">
+                    <ul class="lista-tarjeta list-inline">
+                        <li class="list-inline-item"><i class="fab fa-cc-visa text-gray"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-cc-mastercard text-gray"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-cc-discover text-gray"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-cc-paypal text-gray"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-cc-amex text-gray"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
+                    <h6 class="text-white">Menu</h6>
+                    <ul class="lista-menu list-unstyled mb-0">
+                        <li class="mb-2"> <a class="reset-anchor" href="index.html">Inicio</a></li>
+                        <li class="mb-2"><a class="reset-anchor" href="nosotros.html">Nosotros</a></li>
+                        <li class="mb-2"><a class="reset-anchor" href="reconocimiento.html">Reconocimientos</a></li>
+                        <li class="mb-2"><a class="reset-anchor" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
+                    <h6 class="text-white">Checkout</h6>
+                    <ul class="lista-menu list-unstyled mb-0">
+                        <li class="mb-2"> <a class="reset-anchor" href="#">Mi cuenta</a></li>
+                        <li class="mb-2"> <a class="reset-anchor" href="#">Checkout</a></li>
+                        <li class="mb-2"> <a class="reset-anchor" href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
+                    <p class="lead mb-1 text-white"><a class="reset-anchor text-white" href="tel:+51 934 835 047"> <i
+                                class="fab fab fa-whatsapp"></i> 934 835 047</a></p>
+                    <p class="text-muted">Lima, Perú</p>
+                    <ul class="lista-social list-inline mb-0">
+                        <li class="list-inline-item"><a class="social-icon" href="#"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-youtube"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a class="social-icon" href="#"><i
+                                    class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
-              <h6 class="text-white">Menu</h6>
-              <ul class="lista-menu list-unstyled mb-0">
-                <li class="mb-2"> <a class="reset-anchor" href="index.html">Inicio</a></li>
-                <li class="mb-2"><a class="reset-anchor" href="nosotros.html">Nosotros</a></li>
-                <li class="mb-2"><a class="reset-anchor" href="reconocimiento.html">Reconocimientos</a></li>
-                <li class="mb-2"><a class="reset-anchor" href="contacto.html">Contacto</a></li>
-              </ul>
-            </div>
-            <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
-              <h6 class="text-white">Checkout</h6>
-              <ul class="lista-menu list-unstyled mb-0">
-                <li class="mb-2"> <a class="reset-anchor" href="#">Mi cuenta</a></li>
-                <li class="mb-2"> <a class="reset-anchor" href="#">Checkout</a></li>
-                <li class="mb-2"> <a class="reset-anchor" href="#">FAQ</a></li>
-              </ul>
-            </div>
-            <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
-              <p class="lead mb-1 text-white"><a class="reset-anchor text-white" href="tel:+51 934 835 047"> <i class="fab fab fa-whatsapp"></i> 934 835 047</a></p>
-              <p class="text-muted">Lima, Perú</p>
-              <ul class="lista-social list-inline mb-0">
-                <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-youtube"></i></a></li>
-                <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-pinterest"></i></a></li>
-              </ul>
-            </div>
-          </div>
         </div>
         <div class="container">
-          <div class="border-top py-4" style="border-color: #1d1d1d !important">
-            <div class="row">
-              <div class="col-lg-12">
-                <p class="small text-muted mb-0 text-center">© 2024 All rights reserved.</p>
-              </div>
+            <div class="border-top py-4" style="border-color: #1d1d1d !important">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="small text-muted mb-0 text-center">© 2024 All rights reserved.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-     </footer>
+    </footer>
 
-    
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://d19m59y37dris4.cloudfront.net/shopio/1-1/vendor/swiper/swiper-bundle.min.js"></script>
@@ -499,76 +532,131 @@
         //   https://css-tricks.com/ajaxing-svg-sprite/
         // ------------------------------------------------------ //
         function injectSvgSprite(path) {
-        
+
             var ajax = new XMLHttpRequest();
             ajax.open("GET", path, true);
             ajax.send();
-            ajax.onload = function(e) {
-            var div = document.createElement("div");
-            div.className = 'd-none';
-            div.innerHTML = ajax.responseText;
-            document.body.insertBefore(div, document.body.childNodes[0]);
+            ajax.onload = function (e) {
+                var div = document.createElement("div");
+                div.className = 'd-none';
+                div.innerHTML = ajax.responseText;
+                document.body.insertBefore(div, document.body.childNodes[0]);
             }
         }
         // this is set to BootstrapTemple website as you cannot 
         // inject local SVG sprite (using only 'icons/orion-svg-sprite.40382315.svg' path)
         // while using file:// protocol
         // pls don't forget to change to your domain :)
-        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
-        
-      </script>
-    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
 
-   <!-- Vue JS-->
+    </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Vue JS-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
         var app = new Vue({
             el: "#app",
             data: {
-                nombre:'',
+                nombre: '',
                 celular: '',
                 cantidad: 1,
                 showProduct: false,
                 selectedProduct: null,
-                products: [],
-                /* products : [
-                    { id: 1, name: 'Aceite de Oliva 1/2 Lt', price: 26, pricePlus: 28, images: './assets/aceite-500ml.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 2' },
-                    { id: 2, name: 'Aceite de Oliva 1 Lt', price: 50, pricePlus: 50, images: './assets/aceite-litro.png',  type: 'Aceite de Oliva Extra Virgen', description: 'Descripción del producto 1' },
-                    { id: 3, name: 'Aceitunas Negras 1kg', price: 20, pricePlus: 22, images: './assets/aceiguna-negra-kg.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 3' },
-                    { id: 4, name: 'Aceitunas Negras 1/2kg', price: 10, pricePlus: 12, images: './assets/aceituna-negra-medio.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
-                    { id: 5, name: 'Aceitunas Verdes 1/2kg', price: 10, pricePlus: 12, images: './assets/aceituna-verde-medio.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
-                    { id: 6, name: 'Aceitunas Verdes 1/2kg', price: 20, pricePlus: 22, images: './assets/aceituna-verde-kg.jpg',  type: 'Aceitunas Selectas', description: 'Descripción del producto 4' },
-                ] */
+                // products: [],
+                products: [
+                    {
+                        "id": 1,
+                        "name": "Aceite de Oliva 1/2 Lt",
+                        "price": 30,
+                        "pricePlus": 30,
+                        "images": "./assets/aceite-500ml.png",
+                        "type": "Aceite de Oliva Extra Virgen",
+                        "presentacion": "Botella de vidrio verde oscuro",
+                        "description": "Descripción del producto Aceite, Prensado en Frio, 0.3% de Acidez."
+                    },
+                    {
+                        "id": 2,
+                        "name": "Aceite de Oliva 1 Lt",
+                        "price": 60,
+                        "pricePlus": 60,
+                        "images": "./assets/aceite-litro.png",
+                        "type": "Aceite de Oliva Extra Virgen",
+                        "presentacion": "Botella de vidrio verde oscuro",
+                        "description": "Descripción del producto Aceite, Prensado en Frio, 0.3% de Acidez."
+                    },
+                    {
+                        "id": 3,
+                        "name": "Aceitunas Negras 1kg",
+                        "price": 24,
+                        "pricePlus": 24,
+                        "images": "./assets/aceiguna-negra-kg.jpg",
+                        "type": "Aceitunas Selectas",
+                        "presentacion": "Bolsa Polietileno",
+                        "description": "Aceitunas Selectas en salmuera."
+                    },
+                    {
+                        "id": 4,
+                        "name": "Aceitunas Negras 1/2kg",
+                        "price": 12,
+                        "pricePlus": 12,
+                        "images": "./assets/aceituna-negra-medio.jpg",
+                        "type": "Aceitunas Selectas",
+                        "presentacion": "Bolsa Polietileno",
+                        "description": "Aceitunas Selectas en salmuera."
+                    },
+                    {
+                        "id": 5,
+                        "name": "Aceitunas Verdes 1/2kg",
+                        "price": 12,
+                        "pricePlus": 12,
+                        "images": "./assets/aceituna-verde-medio.jpg",
+                        "type": "Aceitunas Selectas",
+                        "presentacion": "Bolsa Polietileno",
+                        "description": "Aceitunas Selectas en salmuera."
+                    },
+                    {
+                        "id": 6,
+                        "name": "Aceitunas Verdes 1/2kg",
+                        "price": 24,
+                        "pricePlus": 24,
+                        "images": "./assets/aceituna-verde-kg.jpg",
+                        "type": "Aceitunas Selectas",
+                        "presentacion": "Bolsa Polietileno",
+                        "description": "Aceitunas Selectas en salmuera."
+                    }
+                ]
             },
             mounted() {
-                this.fetchProducts();
+                // this.fetchProducts();
             },
             methods: {
                 fetchProducts() {
                     axios.get('https://oligume-jlcallalle.vercel.app/productos.json')
                         .then(response => {
-                        this.products = response.data.products;
-                    })
-                    .catch(error => {
-                        console.error('Error al obtener los productos:', error);
-                    });
+                            this.products = response.data.products;
+                        })
+                        .catch(error => {
+                            console.error('Error al obtener los productos:', error);
+                        });
                 },
                 // Método para mostrar el detalle de un producto
                 showDetail(product) {
-                    this.selectedProduct = product; 
+                    this.selectedProduct = product;
                     this.showProduct = true;
-                }, 
+                },
                 showContact() {
-                    console.log('prod' , this.selectedProduct);
+                    console.log('prod', this.selectedProduct);
                 },
                 sendMessage() {
                     // Crear el mensaje con los datos del formulario
                     //const mensaje = `Hola ${this.nombre}, tu número de celular es ${this.celular}.`;
                     // const mensaje = `Hola *${this.nombre}*, tu pedido es: ${this.selectedProduct.name}. El Monto Total es: S/. ${this.precioFinal}`;
                     const mensaje = `Hola 👋 deseo este producto de tu tienda online.\n \n*¿Quién recibe el producto?:* \n *Nombre:* ${this.nombre}\n *Celular:* ${this.celular}\n \n*Detalle Pedido:* \n Producto: ${this.selectedProduct.name} \n Cantidad: ${this.cantidad} \n Subtotal: S/.${this.selectedProduct.price} \n *Total a pagar:* S/.${this.precioFinal} `;
-                    
+
                     // URL de la API de WhatsApp
                     const apiURL = 'https://api.whatsapp.com/send?';
 
@@ -587,7 +675,7 @@
                     return this.cantidad * this.selectedProduct.price
                 },
                 precioFinal() {
-                    const dscto =  0;
+                    const dscto = 0;
                     return this.precioTotal - dscto
                 },
             }
