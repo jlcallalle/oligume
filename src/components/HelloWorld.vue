@@ -33,6 +33,16 @@ const count = ref(0)
       >Vue Docs Scaling up Guide</a
     >.
   </p>
+  <div class="card" style="width: 18rem;">
+    <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Imagen de ejemplo">
+    <div class="card-body">
+      <h5 class="card-title">Título de la Card</h5>
+      <p class="card-text">
+        Este es un ejemplo de card utilizando Bootstrap y Vue 3. Puedes usar este componente para mostrar información de forma atractiva.
+      </p>
+      <a href="#" class="btn btn-primary">Ver más</a>
+    </div>
+  </div>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
