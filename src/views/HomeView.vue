@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
         <div class="home">
-            <section id="slider" class="mt-3">
+            <section id="slider" class="mt-3 container-fluid">
                 <div id="oliveCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#oliveCarousel" data-bs-slide-to="0" class="active"
@@ -13,13 +13,13 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/banner1.jpg" class="d-block w-100" alt="Aceite de Oliva Extra Virgen" />
+                            <img src="@/assets/banner4.jpg" class="d-block w-100 carousel-image" alt="Aceitunas Premium" />
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="@/assets/banner1.jpg" class="d-block w-100 carousel-image" alt="Aceite de Oliva Extra Virgen" />
                         </div>
                         <div class="carousel-item">
-                            <img src="/banner2.png" class="d-block w-100" alt="Aceitunas Premium" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/banner1.jpg" class="d-block w-100" alt="Calidad y Tradición" />
+                            <img src="@/assets//banner3.jpg" class="d-block w-100 carousel-image" alt="Calidad y Tradición" />
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#oliveCarousel"
@@ -34,10 +34,11 @@
                     </button>
                 </div>
             </section>
-            <section class="productos-destacados">
+            <pre class="d-none">productos {{ productos }}</pre>
+            <section class="productos-destacados container">
                 <h2 class="text-center my-4">Productos Destacados</h2>
                 <div class="row">
-                    <div class="col-md-4 mb-4" v-for="producto in productos" :key="producto.id">
+                    <div class="col-md-3 mb-4" v-for="producto in productos" :key="producto.id">
                     <div class="card">
                         <img :src="producto.imagen" class="card-img-top" :alt="producto.nombre">
                         <div class="card-body text-center">
@@ -59,11 +60,11 @@ import MainLayout from "../layouts/MainLayout.vue";
 // import aceite500 from '@/assets/aceite-500ml.png'
 
 const productos = [
-    { id: 1, nombre: 'Aceite de Oliva 1/2 Lt', precio: 30, imagen: '../aceite-500ml.png', descripcion: 'Aceite de oliva extra virgen de alta calidad.' },
-    { id: 2, nombre: 'Aceite de Oliva 1 Lt', precio: 60, imagen: '../aceite-500ml.png', descripcion: 'Botella de 1 litro de aceite extra virgen.' },
-    { id: 3, nombre: 'Aceitunas Negras 1/2kg', precio: 15, imagen: '../aceite-500ml.png', descripcion: 'Aceitunas negras seleccionadas.' },
-    { id: 4, nombre: 'Aceitunas Negras 1kg', precio: 30, imagen: '../aceite-500ml.png', descripcion: 'Bolsa de aceitunas negras grandes.' },
-    { id: 5, nombre: 'Aceitunas Verdes 1/2kg', precio: 15, imagen: '../aceite-500ml.png', descripcion: 'Aceitunas verdes seleccionadas.' },
-    { id: 6, nombre: 'Aceitunas Verdes 1kg', precio: 30, imagen: '../aceite-500ml.png', descripcion: 'Bolsa de aceitunas verdes frescas.' }
+    { id: 1, nombre: 'Aceite de Oliva 1/2 Lt', precio: 35, imagen: '/img/aceite-500ml.png', descripcion: 'Aceite de oliva extra virgen de alta calidad.' },
+    { id: 2, nombre: 'Aceite de Oliva 1 Lt', precio: 68, imagen: '/img/aceite-litro.png', descripcion: 'Botella de 1 litro de aceite extra virgen.' },
+    { id: 3, nombre: 'Aceitunas Negras 1/2kg', precio: 15, imagen: '/img/aceituna-negra-medio.jpg', descripcion: 'Aceitunas negras seleccionadas.' },
+    { id: 4, nombre: 'Aceitunas Negras 1kg', precio: 30, imagen: '/img/aceituna-negro-kg.jpg', descripcion: 'Bolsa de aceitunas negras grandes.' },
+    { id: 5, nombre: 'Aceitunas Verdes 1/2kg', precio: 15, imagen: '/img/aceituna-verde-medio.jpg', descripcion: 'Aceitunas verdes seleccionadas.' },
+    { id: 6, nombre: 'Aceitunas Verdes 1kg', precio: 30, imagen: '/img/aceituna-verde-kg.jpg', descripcion: 'Bolsa de aceitunas verdes frescas.' }
   ]
 </script>
