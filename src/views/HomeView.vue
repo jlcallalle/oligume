@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
         <div class="home">
-            <section id="slider" class="mt-3 container-fluid">
+            <section id="slider" class="mt-3 container">
                 <div id="oliveCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#oliveCarousel" data-bs-slide-to="0" class="active"
@@ -62,6 +62,7 @@ import MainLayout from "../layouts/MainLayout.vue";
 const productos = [
     { id: 1, nombre: 'Aceite de Oliva 1/2 Lt', precio: 35, imagen: '/img/aceite-500ml.png', descripcion: 'Aceite de oliva extra virgen de alta calidad.' },
     { id: 2, nombre: 'Aceite de Oliva 1 Lt', precio: 68, imagen: '/img/aceite-litro.png', descripcion: 'Botella de 1 litro de aceite extra virgen.' },
+    { id: 2, nombre: 'Aceite de Oliva 3 Lt', precio: 190, imagen: '/img/aceite-bidon.png', descripcion: 'Bidón 3Lt de aceite extra virgen.' },
     { id: 3, nombre: 'Aceitunas Negras 1/2kg', precio: 15, imagen: '/img/aceituna-negra-medio.jpg', descripcion: 'Aceitunas negras seleccionadas.' },
     { id: 4, nombre: 'Aceitunas Negras 1kg', precio: 30, imagen: '/img/aceituna-negro-kg.jpg', descripcion: 'Bolsa de aceitunas negras grandes.' },
     { id: 5, nombre: 'Aceitunas Verdes 1/2kg', precio: 15, imagen: '/img/aceituna-verde-medio.jpg', descripcion: 'Aceitunas verdes seleccionadas.' },
