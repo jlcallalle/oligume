@@ -11,13 +11,13 @@ import logo from '@/assets/oligume.png'
                         <img class="img-fluid mb-3" :src="logo" alt="Oligume Logo" width="110" />
                     </router-link>
 
-                    <ul class="lista-tarjeta list-inline">
+                   <!--  <ul class="lista-tarjeta list-inline">
                         <li class="list-inline-item"><i class="fab fa-cc-visa text-gray"></i></li>
                         <li class="list-inline-item"><i class="fab fa-cc-mastercard text-gray"></i></li>
                         <li class="list-inline-item"><i class="fab fa-cc-discover text-gray"></i></li>
                         <li class="list-inline-item"><i class="fab fa-cc-paypal text-gray"></i></li>
                         <li class="list-inline-item"><i class="fab fa-cc-amex text-gray"></i></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
                     <h6 class="text-white">Menu</h6>
@@ -37,18 +37,29 @@ import logo from '@/assets/oligume.png'
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
-                    <p class="lead mb-1 text-white"><a class="reset-anchor text-white" href="tel:+51 934 835 047"> <i
-                                class="fab fab fa-whatsapp"></i> 934 835 047</a></p>
+                    <p class="lead mb-1 text-white">
+                        <a class="reset-anchor text-white" href="https://wa.me/51934835047" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp me-2"></i> 934 835 047
+                        </a>
+                    </p>
                     <p class="text-muted">Lima, Perú</p>
                     <ul class="lista-social list-inline mb-0">
-                        <li class="list-inline-item"><a class="social-icon" href="#"><i
-                                    class="fab fa-facebook-f"></i></a></li>
-                        <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+                        <li class="list-inline-item">
+                            <a class="social-icon" href="https://www.facebook.com/oligume" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f fa-2x" ></i>
+                            </a>
                         </li>
-                        <li class="list-inline-item"><a class="social-icon" href="#"><i class="fab fa-youtube"></i></a>
+                        <li class="list-inline-item">
+                            <a class="social-icon" href="https://www.instagram.com/oligume" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
                         </li>
-                        <li class="list-inline-item"><a class="social-icon" href="#"><i
-                                    class="fab fa-pinterest"></i></a></li>
+                        <li class="list-inline-item">
+                            <a class="social-icon" href="https://www.tiktok.com/@oligume" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-tiktok fa-2x"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -84,5 +95,10 @@ nav a {
 nav a.router-link-exact-active {
     font-weight: bold;
     color: green;
+}
+
+.lista-social li a {
+    color: gray;
+    margin-right: 15px;
 }
 </style>
