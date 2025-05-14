@@ -7,25 +7,17 @@ import logo from '@/assets/oligume.png'
         <div class="container py-5">
             <div class="row">
                 <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
-                    <router-link class="navbar-brand" to="/">
-                        <img class="img-fluid mb-3" :src="logo" alt="Oligume Logo" width="110" />
-                    </router-link>
-
-                   <!--  <ul class="lista-tarjeta list-inline">
-                        <li class="list-inline-item"><i class="fab fa-cc-visa text-gray"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-cc-mastercard text-gray"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-cc-discover text-gray"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-cc-paypal text-gray"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-cc-amex text-gray"></i></li>
-                    </ul> -->
+                  <NuxtLink class="navbar-brand" to="/">
+                    <img class="img-fluid mb-3" :src="logo" alt="Oligume Logo" width="110" />
+                  </NuxtLink>
                 </div>
                 <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
                     <h6 class="text-white">Menu</h6>
                     <ul class="lista-menu list-unstyled mb-0">
-                        <li class="mb-2"> <a class="reset-anchor" href="index.html">Inicio</a></li>
-                        <li class="mb-2"><a class="reset-anchor" href="nosotros.html">Nosotros</a></li>
-                        <li class="mb-2"><a class="reset-anchor" href="reconocimiento.html">Reconocimientos</a></li>
-                        <li class="mb-2"><a class="reset-anchor" href="contacto.html">Contacto</a></li>
+                        <li class="mb-2"> <NuxtLink class="reset-anchor" to="/">Inicio</NuxtLink></li>
+                        <li class="mb-2"><NuxtLink class="reset-anchor" to="/nosotros">Nosotros</NuxtLink></li>
+                        <li class="mb-2"><NuxtLink class="reset-anchor" to="/reconocimientos">Reconocimientos</NuxtLink></li>
+                        <li class="mb-2"><NuxtLink class="reset-anchor" to="/contacto">Contacto</NuxtLink></li>
                     </ul>
                 </div>
                 <div class="col-md-2 col-sm-12 mb-3 mb-md-0">
@@ -38,9 +30,9 @@ import logo from '@/assets/oligume.png'
                 </div>
                 <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
                     <p class="lead mb-1 text-white">
-                        <a class="reset-anchor text-white" href="https://wa.me/51934835047" target="_blank"
+                        <a class="reset-anchor text-white" href="https://wa.me/51941498032" target="_blank"
                             rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp me-2"></i> 934 835 047
+                            <i class="fab fa-whatsapp me-2"></i> 941 498 032
                         </a>
                     </p>
                     <p class="text-muted">Lima, Perú</p>
