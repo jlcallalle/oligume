@@ -19,6 +19,14 @@
     }
   ]
 })
+
+const gtagEvent = () => {
+  window.gtag?.('event', 'click_comprar', {
+    event_category: 'boton',
+    event_label: 'Compra ahora'
+  });
+};
+
 </script>
    
    <template>
@@ -31,6 +39,7 @@
             href="https://wa.me/51987654321"
             target="_blank"
             class="btn btn-success btn-lg boton-whatsapp"
+            @click="gtagEvent"
           > 
             Compra Aquí
           </a>
