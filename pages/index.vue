@@ -36,7 +36,7 @@ const gtagEvent = () => {
         <SwiperSlide>
           <img :src="bannerAceite" alt="Banner Aceite Oligume" class="w-100" />
           <a
-            href="https://wa.me/51987654321"
+            href="https://wa.me/51941498032"
             target="_blank"
             class="btn btn-success btn-lg boton-whatsapp"
             @click="gtagEvent"
