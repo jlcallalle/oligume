@@ -11704,3 +11704,30 @@ a {
     left: 18%;
     top: 60%;
 }
+
+@media (max-width: 576px) {
+  .btn-success.boton-whatsapp {
+    padding: 6px 10px;
+    font-size: 12px;
+    left: 10%;
+    top: 55%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .card-img-top {
+    max-width: 100%;
+    height: auto;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+}
+
+
+@media (max-width: 576px) { 
+  .producto-detalle img.img-fluid {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+}
