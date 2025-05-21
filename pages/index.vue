@@ -76,4 +76,20 @@ const gtagEvent = () => {
   border-radius: 0.5rem;
   overflow: hidden;
 }
+
+/* .swiper-oligume img {
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+} */
+
+/* Para móviles: mayor altura */
+@media (max-width: 768px) {
+  .swiper-oligume img {
+    height: 250px;
+    object-fit: cover;
+    object-position: center center; 
+  }
+}
+
 </style>
