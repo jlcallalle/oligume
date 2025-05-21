@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nombre": "Aceite de Oliva 1/2 Lt",
+    "slug": "aceite-oliva-500ml",
+    "precio": 25,
+    "descripcion": "Aceite de oliva extra virgen de alta calidad.",
+    "imagen": "/img/aceite-500ml.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Aceite de Oliva 1 Lt",
+    "slug": "aceite-oliva-1lt",
+    "precio": 50,
+    "descripcion": "Aceite de oliva extra virgen de alta calidad.",
+    "imagen": "/img/aceite-litro.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Aceite de Oliva 3 Lt",
+    "slug": "aceite-oliva-3lt",
+    "precio": 140,
+    "descripcion": "Aceite de oliva extra virgen de alta calidad.",
+    "imagen": "/img/aceite-bidon.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Aceitunas Negras 1/2kg",
+    "slug": "aceitunas-negras-500gr",
+    "precio": 15,
+    "descripcion": "Aceitunas negras seleccionadas.",
+    "imagen": "/img/aceituna-negra-medio.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Aceitunas Negras 1kg",
+    "slug": "aceitunas-negras-1kg",
+    "precio": 30,
+    "descripcion": "Bolsa de aceitunas negras grandes.",
+    "imagen": "/img/aceituna-negro-kg.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Aceitunas Verdes 1/2kg",
+    "slug": "aceitunas-verdes-500gr",
+    "precio": 15,
+    "descripcion": "Aceitunas verdes seleccionadas.",
+    "imagen": "/img/aceituna-verde-medio.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Aceitunas Verdes 1kg",
+    "slug": "aceitunas-verdes-1kg",
+    "precio": 30,
+    "descripcion": "Bolsa de aceitunas verdes frescas.",
+    "imagen": "/img/aceituna-verde-kg.jpg"
+  }
+]
