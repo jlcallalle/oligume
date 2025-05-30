@@ -54,7 +54,7 @@ useHead({
             <!-- <NuxtLink to="/" class="btn btn-outline-secondary mt-3">← Volver</NuxtLink> -->
             <NuxtLink to="/" class="btn btn-outline-secondary mt-3 me-2">← Volver</NuxtLink>
               <a
-                :href="`https://wa.me/51934835047?text=Hola,%20deseo%20información%20sobre%20el%20producto%20${encodeURIComponent(producto?.nombre || '')}`"
+                :href="`https://wa.me/51941498032?text=Hola,%20deseo%20información%20sobre%20el%20producto%20${encodeURIComponent(producto?.nombre || '')}`"
                 target="_blank"
                 class="btn btn-success mt-3">
                 <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
