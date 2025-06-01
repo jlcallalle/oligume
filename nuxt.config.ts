@@ -58,13 +58,46 @@ export default defineNuxtConfig({
         {
           name: 'robots',
           content: 'index, follow'
+        },
+         // Open Graph (opcional pero recomendado)
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          property: 'og:title',
+          content: 'Oligume | Aceite de Oliva Extra Virgen y Aceitunas Ecológicas'
+        },
+        {
+          property: 'og:description',
+          content: 'Aceite de oliva y aceitunas ecológicas del valle de Acarí. Calidad, tradición y sabor peruano.'
+        },
+        {
+          property: 'og:image',
+          content: 'https://oligume.pe/og-image.png'
+        },
+        {
+          property: 'og:url',
+          content: 'https://oligume.pe'
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image'
+        },
+        {
+          name: 'twitter:title',
+          content: 'Oligume | Aceite de Oliva Extra Virgen y Aceitunas Ecológicas'
+        },
+        {
+          name: 'twitter:description',
+          content: 'Desde Acarí, Arequipa. Calidad peruana en cada gota y cada aceituna.'
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://oligume.pe/og-image.png'
         }
       ],
       link: [
-        {
-          rel: 'canonical',
-          href: 'https://oligume.pe/'
-        },
         {
           rel: 'icon',
           type: 'image/png',
