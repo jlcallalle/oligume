@@ -14,16 +14,39 @@ useHead({
       name: 'description',
       content: producto?.descripcion || 'Descubre los productos naturales de Oligume.'
     }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://oligume.pe/producto/${slug}`
+    }
   ]
 })
+
+const categoriaSEO = computed(() => {
+  if (!producto) return ''
+
+  const nombre = producto.nombre.toLowerCase()
+
+  if (nombre.includes('aceite de oliva')) {
+    return 'Aceite de Oliva Extra Virgen'
+  } else if (nombre.includes('aceitunas')) {
+    return 'Aceitunas Ecológicas'
+  } else {
+    return 'Producto Oligume'
+  }
+})
+
 </script>
 
 <template>
   <!-- <pre>producto {{ producto }}</pre> -->
+   <p class="d-none">slug {{ slug }}</p>
   <div class="wrap-detalle-producto">
     <div class="producto-header">
       <div class="container">
-        <h1>Aceite de oliva extra virgen</h1>
+       <!--  <h1>Aceite de oliva extra virgen</h1> -->
+        <h1>{{ categoriaSEO }}</h1>
       </div>
     </div>
     <div class="producto-detalle">

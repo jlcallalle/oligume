@@ -11,14 +11,21 @@
   import productos from '@/data/productos.json'
 
   useHead({
-  title: 'Oligume, Aceitunas y Aceite de Oliva',
-  meta: [
-    {
-      name: 'description',
-      content: 'Productos naturales y ecológicos desde Acarí: aceitunas y aceite de oliva extra virgen.'
-    }
-  ]
-})
+    title: 'Oligume, Aceitunas y Aceite de Oliva',
+    meta: [
+      {
+        name: 'description',
+        content: 'Productos naturales y ecológicos desde Acarí: aceitunas y aceite de oliva extra virgen.'
+      }
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://oligume.pe/'
+      }
+    ]
+  })
+
 
 const gtagEvent = () => {
   window.gtag?.('event', 'click_comprar', {
