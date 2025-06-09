@@ -1,3 +1,6 @@
+<script setup>
+import FormContacto from '@/components/FormContacto.vue'
+</script>
 <template>
   <div class="producto-header">
     <div class="container">
@@ -14,7 +17,7 @@
       class="mx-auto bg-light p-4 rounded shadow-sm"
       style="max-width: 500px"
     >
-      <form>
+      <!-- <form>
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>
           <input
@@ -46,7 +49,8 @@
         </div>
 
         <button type="submit" class="btn btn-success w-100">Enviar</button>
-      </form>
+      </form> -->
+       <FormContacto />
     </div>
 
     <p class="text-center mt-4">Síguenos en nuestras redes sociales:</p>
