@@ -6,7 +6,7 @@ import logo from '@/assets/oligume.png'
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
       <NuxtLink class="navbar-brand" to="/">
-        <img class="logo-grand" :src="logo" alt="Oligume Logo" />
+        <img class="logo-grand" :src="logo" alt="Oligume" width="110" />
       </NuxtLink>
 
       <button

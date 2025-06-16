@@ -62,19 +62,17 @@ const categoriaSEO = computed(() => {
               <!-- <span class="text-decoration-line-through">S/.50.00</span> -->
               <span class="precio-real">S/.{{ producto.precio }}</span>
             </div>
-            <!-- <p>{{ producto.descripcion }}</p> -->
             <ul class="data-producto">
               <li>Marca: <span>Oligume</span></li>
               <li>Región: <span>AREQUIPA</span></li>
               <li>
                 Presentación: <span> {{ producto.descripcion }}</span>
               </li>
-              <li>Peso <span>1 Litro</span></li>
+              <li>Peso <span>{{ producto.peso_en }}</span></li>
               <li>Pedido Min: <span> 1</span></li>
               <li>Disponibilidad: <span> Todo el año</span></li>
               <li>Descripción: {{ producto.descripcion }}</li>
             </ul>
-            <!-- <NuxtLink to="/" class="btn btn-outline-secondary mt-3">← Volver</NuxtLink> -->
             <NuxtLink to="/" class="btn btn-outline-secondary mt-3 me-2">← Volver</NuxtLink>
               <a
                 :href="`https://wa.me/51941498032?text=Hola,%20deseo%20información%20sobre%20el%20producto%20${encodeURIComponent(producto?.nombre || '')}`"

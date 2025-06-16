@@ -11732,3 +11732,8 @@ a {
     transition: transform 0.3s ease;
   }
 }
+
+/* Custom */
+.swiper-button-prev, .swiper-button-next {
+    color: gray!important;
+}

@@ -5,7 +5,8 @@
     "slug": "aceite-oliva-500ml",
     "precio": 25,
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
-    "imagen": "/img/aceite-500ml.png"
+    "imagen": "/img/aceite-500ml.png",
+    "peso_en": "500 ml"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "slug": "aceite-oliva-1lt",
     "precio": 50,
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
-    "imagen": "/img/aceite-litro.png"
+    "imagen": "/img/aceite-litro.png",
+    "peso_en": "1000 ml"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "slug": "aceite-oliva-3lt",
     "precio": 140,
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
-    "imagen": "/img/aceite-bidon.png"
+    "imagen": "/img/aceite-bidon.png",
+    "peso_en": "3000 ml"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "slug": "aceitunas-negras-500gr",
     "precio": 15,
     "descripcion": "Aceitunas negras seleccionadas.",
-    "imagen": "/img/aceituna-negra-medio.jpg"
+    "imagen": "/img/aceituna-negra-medio.jpg",
+    "peso_en": "500 gr"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "slug": "aceitunas-negras-1kg",
     "precio": 30,
     "descripcion": "Bolsa de aceitunas negras grandes.",
-    "imagen": "/img/aceituna-negro-kg.jpg"
+    "imagen": "/img/aceituna-negro-kg.jpg",
+    "peso_en": "1000 gr"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "slug": "aceitunas-verdes-500gr",
     "precio": 15,
     "descripcion": "Aceitunas verdes seleccionadas.",
-    "imagen": "/img/aceituna-verde-medio.jpg"
+    "imagen": "/img/aceituna-verde-medio.jpg",
+    "peso_en": "500 gr"
   },
   {
     "id": 7,
@@ -53,6 +59,7 @@
     "slug": "aceitunas-verdes-1kg",
     "precio": 30,
     "descripcion": "Bolsa de aceitunas verdes frescas.",
-    "imagen": "/img/aceituna-verde-kg.jpg"
+    "imagen": "/img/aceituna-verde-kg.jpg",
+    "peso_en": "1000 gr"
   }
 ]
