@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirige todo el tráfico a HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://oligume.pe/$1 [L,R=301]
+
+# Redirige www a sin www
+RewriteCond %{HTTP_HOST} ^www\.oligume\.pe$ [NC]
+RewriteRule ^(.*)$ https://oligume.pe/$1 [L,R=301]

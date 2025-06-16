@@ -7,7 +7,6 @@
   import 'swiper/css/pagination'
   import bannerAceite from '@/assets/slider-campo.png' 
   import bannerAceituna from '@/assets/banner-aceituna.png'
-/*   import bannerAceituna from '@/assets/banner-aceituna.png' */
   import productos from '@/data/productos.json'
 
   useHead({
