@@ -45,7 +45,7 @@ useHead({
                         </div>
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">1 Litro Aceite de Oliva Extra Virgen </h5>
-                            <h5 class="my-0"><span class="text-muted me-2"><del>S/60</del></span> <b>S/50</b></h5>
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/60</del></span> <b>S/49.90</b></h5>
                             <NuxtLink
                                 :to="`producto/aceite-oliva-1lt`"
                                 class="btn-cyber btn btn-success mt-3"
@@ -88,7 +88,7 @@ useHead({
                         </div>
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">1 Litro Aceite de Oliva + 1kg de Aceitunas</h5>
-                            <h5 class="my-0"><span class="text-muted me-2"><del>S/80</del></span> <b>S/78</b></h5>
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/80</del></span> <b>S/75</b></h5>
                             <NuxtLink
                                 :to="`producto/aceite-oliva-1lt`"
                                 class="btn-cyber btn btn-success mt-3"

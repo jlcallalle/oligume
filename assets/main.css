@@ -11709,9 +11709,10 @@ a {
 @media (max-width: 576px) {
   .btn-success.boton-whatsapp {
     padding: 6px 10px;
-    font-size: 12px;
-    left: 10%;
-    top: 55%;
+    font-size: 15px;
+    left: 5%;
+    top: auto;
+    bottom: 5%;
   }
 }
 
@@ -11799,4 +11800,16 @@ a {
 .btn-cyber:hover {
   color: white;
   background-color: #FC2B73;
+}
+
+.navbar {
+    background-color: #F5F3F0;
+}
+
+.menu-oligume a{ 
+  color: #67714E;
+}
+
+.menu-oligume a:hover{ 
+  color: #ACA571;
 }

@@ -1,9 +1,12 @@
 <script setup>
 import logo from '@/assets/oligume.png'
+import dayjs from 'dayjs'
+const today = dayjs()
+const mostrarCyberWow = today.isAfter(dayjs('2025-06-13')) && today.isBefore(dayjs('2025-06-18'))
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg">
     <div class="container px-4 px-lg-5">
       <NuxtLink class="navbar-brand" to="/">
         <img class="logo-grand" :src="logo" alt="Oligume" width="90" />
@@ -22,7 +25,7 @@ import logo from '@/assets/oligume.png'
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+        <ul class="menu-oligume navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
           <li class="nav-item">
             <NuxtLink class="nav-link" to="/nosotros">Nosotros</NuxtLink>
           </li>
@@ -32,9 +35,13 @@ import logo from '@/assets/oligume.png'
           <li class="nav-item">
             <NuxtLink class="nav-link" to="/contacto">Contacto</NuxtLink>
           </li>
-          <li class="nav-item nav-cyber">
+          <!-- <li class="nav-item nav-cyber">
+            <NuxtLink class="nav-link" to="/cyber_wow">Cyber Wow</NuxtLink>
+          </li> -->
+          <li v-if="mostrarCyberWow" class="nav-item nav-cyber">
             <NuxtLink class="nav-link" to="/cyber_wow">Cyber Wow</NuxtLink>
           </li>
+
         </ul>
 
         <div class="d-flex align-items-center whatsapp-header">
