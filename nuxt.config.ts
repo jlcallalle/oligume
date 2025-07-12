@@ -29,6 +29,7 @@ export default defineNuxtConfig({
       "/producto/aceitunas-negras-1kg",
       "/producto/aceitunas-verdes-500gr",
       "/producto/aceitunas-verdes-1kg",
+      "/cyber_wow",
     ],
   },
   fonts: {
@@ -48,12 +49,12 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Oligume | Aceite de Oliva Extra Virgen y Aceitunas Ecológicas',
+      title: 'Productores de Aceitunas y Aceite de Oliva | Oligume',
       meta: [
         {
           name: 'description',
           content:
-            'Oligume | Productores de aceite de oliva extra virgen y aceitunas ecológicas con pasión y tradición familiar. Desde Acarí, Arequipa, llevamos a tu mesa productos naturales de alta calidad, directo del campo peruano.'
+            'Somos productores de aceitunas y aceite de oliva extra virgen desde Acarí, Arequipa. Compra directo del productor en Oligume.pe.'
         },
         {
           name: 'robots',

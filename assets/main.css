@@ -11720,7 +11720,7 @@ a {
   .card-img-top {
     max-width: 100%;
     height: auto;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transition: transform 0.3s ease;
   }
 }
@@ -11728,7 +11728,7 @@ a {
 
 @media (max-width: 576px) { 
   .producto-detalle img.img-fluid {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transition: transform 0.3s ease;
   }
 }
@@ -11736,4 +11736,67 @@ a {
 /* Custom */
 .swiper-button-prev, .swiper-button-next {
     color: gray!important;
+}
+
+/* .nav-item .nav-link {
+    color: #0c3e2d;
+} */
+
+
+/* Cyber Wow*/
+
+
+.nav-cyber a {
+    color: white;
+    background-color: #1E33EF;
+    border-radius: 9px;
+}
+
+.nav-cyber a:hover {
+    color: white;
+    background-color: #FC2B73;
+}
+
+
+.cyber-wow .producto-header {
+    background: #1E33EF;
+}
+
+
+.cyber-wow .producto-header h1 {
+    color: white;
+}
+
+
+.product-ribbon {
+    position: absolute;
+    right: 0;
+    top: 55px;
+}
+
+.avatar-sm {
+    height: 3rem;
+    width: 3rem;
+}
+
+.avatar-title {
+    align-items: center;
+    background-color: #556ee6;
+    color: #fff;
+    display: flex;
+    font-weight: 500;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-cyber {
+  border: none;
+  color: white;
+  background-color: #1E33EF;
+}
+
+.btn-cyber:hover {
+  color: white;
+  background-color: #FC2B73;
 }
