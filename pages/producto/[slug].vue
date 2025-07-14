@@ -37,6 +37,31 @@ const categoriaSEO = computed(() => {
   }
 })
 
+const textoDescripcion = computed(() => {
+  if (!producto) return ''
+
+  const nombre = producto.nombre.toLowerCase()
+  if (nombre.includes('aceite de oliva')) {
+    return `Nuestro aceite de oliva extra virgen es obtenido por extracción en frío, lo que garantiza la conservación de sus propiedades naturales. Rico en antioxidantes, vitamina E y grasas saludables, es ideal para ensaladas, panes y preparaciones gourmet.`
+  } else if (nombre.includes('aceituna')) {
+    return `Nuestras aceitunas ecológicas provienen del Valle de Acarí, Arequipa. Cultivadas de forma natural, sin pesticidas, con un sabor auténtico y textura firme. Perfectas para acompañar tus comidas o como snack saludable.`
+  } else {
+    return `Producto natural de la región de Arequipa, cultivado y procesado con los más altos estándares de calidad por Oligume.`
+  }
+})
+
+const textoNutricional = computed(() => {
+  if (!producto) return ''
+
+  const nombre = producto.nombre.toLowerCase()
+  if (nombre.includes('aceite de oliva')) {
+    return `El aceite de oliva extra virgen aporta grasas monoinsaturadas saludables que ayudan a reducir el colesterol malo. Contiene antioxidantes naturales, polifenoles y vitamina E, beneficiosos para la salud cardiovascular.`
+  } else if (nombre.includes('aceituna')) {
+    return `Las aceitunas son fuente de fibra, hierro, calcio y vitamina E. Su contenido en antioxidantes y ácidos grasos saludables contribuye a la salud digestiva y cardiovascular.`
+  } else {
+    return `Consulta los valores nutricionales específicos del producto según presentación y origen.`
+  }
+})
 </script>
 
 <template>
@@ -59,8 +84,8 @@ const categoriaSEO = computed(() => {
           <div class="col-md-6">
             <h1 class="mb-3">{{ producto.nombre }}</h1>
             <div class="fs-5 mb-4">PRECIO:
-              <!-- <span class="text-decoration-line-through">S/.50.00</span> -->
-              <span class="precio-real">S/.{{ producto.precio }}</span>
+              <span class="text-decoration-line-through me-1">S/.{{ producto.precioOld }} </span>
+              <span class="precio-real"> S/.{{ producto.precio }}</span>
             </div>
             <ul class="data-producto">
               <li>Marca: <span>Oligume</span></li>
@@ -106,25 +131,15 @@ const categoriaSEO = computed(() => {
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <p>
-                Procede de cultivos de aceitunas con control biológicos, son de calibre grande de primera, procesadas
-                de
-                forma natural con agua y sal, libre de insecticidas y pesticidas. Proporciona beneficios para la
-                salud,
-                vitaminas C y vitaminas, minerales calcio e hierro y antioxidantes, como propiedades antiflamatorias y
-                para disminuir el colesterol.</p>
+              <p>{{ textoDescripcion }}</p>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae necessitatibus ullam dolorem
-                tempora et, ipsam commodi minus eius velit maxime molestiae cumque harum esse aliquid rerum distinctio
-                quae doloribus officiis cum, officia, consectetur aut doloremque veniam. Incidunt dolor, voluptate
-                fuga
-                sapiente magni natus ad nam cumque ratione maiores doloremque.</p>
+              <p>{{ textoNutricional }}</p>
             </div>
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-              <p>Envío a distritos de Lima Metropolitana y Callao. Para envíos a otras
-                regiones, el costo de envío será calculado al momento de realizar el pedido. El tiempo estimado de
-                entrega es de 3 a 5 días hábiles.
+            
+              <p>
+                Realizamos envíos a todos los distritos de Lima Metropolitana y Callao. Para envíos a provincias, trabajamos con agencias de transporte confiables como Shalom, Olva Courier u otra de preferencia del cliente. El costo de envío será calculado al momento de la cotización, según destino y proveedor seleccionado.
               </p>
             </div>
           </div>

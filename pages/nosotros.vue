@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap-detalle-producto">
+  <div class="wrap-detalle-page">
       <div class="producto-header">
         <div class="container">
           <h1>Nosotros</h1>
@@ -18,7 +18,7 @@
                 loading="lazy"
               />
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 detalle-texto">
               <h2 class="display-5 fw-bold lh-1 mb-3">Poductores del Olivo</h2>
               <p>
                 Oligume SAC, es una empresa familiar dedicada a la producción,

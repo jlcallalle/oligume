@@ -2,7 +2,7 @@
 import logo from '@/assets/oligume.png'
 import dayjs from 'dayjs'
 const today = dayjs()
-const mostrarCyberWow = today.isAfter(dayjs('2025-06-13')) && today.isBefore(dayjs('2025-06-18'))
+const mostrarCyberWow = today.isAfter(dayjs('2025-07-14')) && today.isBefore(dayjs('2025-07-18'))
 </script>
 
 <template>
@@ -11,7 +11,6 @@ const mostrarCyberWow = today.isAfter(dayjs('2025-06-13')) && today.isBefore(day
       <NuxtLink class="navbar-brand" to="/">
         <img class="logo-grand" :src="logo" alt="Oligume" width="90" />
       </NuxtLink>
-
       <button
         class="navbar-toggler"
         type="button"

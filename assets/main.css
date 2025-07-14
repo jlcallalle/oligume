@@ -11746,9 +11746,8 @@ a {
 
 /* Cyber Wow*/
 
-
 .nav-cyber a {
-    color: white;
+    color: white!important;
     background-color: #1E33EF;
     border-radius: 9px;
 }
@@ -11812,4 +11811,44 @@ a {
 
 .menu-oligume a:hover{ 
   color: #ACA571;
+}
+
+
+/*Texto Detalle */
+
+.detalle-texto p {
+  font-size: 18px;
+}
+
+.title-p {
+  font-weight: bold;
+}
+
+.list-reconocimientos  li {
+  margin-bottom: 15px;
+}
+
+.wrap-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.title-slider {
+    text-align: center;
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    padding: 0 11rem;
+}
+
+@media (max-width: 820px) {
+  .title-slider {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
 }

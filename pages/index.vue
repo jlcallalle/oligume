@@ -9,6 +9,9 @@
   import bannerAceituna from '@/assets/banner-aceituna.png'
   import bannerMovil1 from '@/assets/banner-movil-1.png'
   import bannerMovil2 from '@/assets/banner-movil-2.png'
+  import bannerCyber from '@/assets/cyber/banner_cyber.png'
+  import bannerCyberMovil from '@/assets/cyber/banner_cyber_movil.png'
+  
 
   import productos from '@/data/productos.json'
 
@@ -40,32 +43,12 @@ const gtagEvent = () => {
    
    <template>
     <section id="slider" class="mt-3 container">
-     <!--  <Swiper :modules="[Navigation, Pagination, Autoplay]" :space-between="30" :slides-per-view="1" :loop="true"
-        :autoplay="{ delay: 5000 }" navigation pagination class="swiper-oligume">
-        <SwiperSlide>
-          <img :src="bannerAceite" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
-          <a
-            href="https://wa.me/51941498032"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Comprar a través de WhatsApp"
-            class="btn btn-success btn-lg boton-whatsapp"
-            @click="gtagEvent"
-          >
-            Compra Aquí
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img :src="bannerAceituna" alt="Aceitunas negras naturales Oligume" class="w-100" loading="lazy" />
-        </SwiperSlide>
-      </Swiper>
- -->
       <!-- Slider para escritorio (solo visible en md en adelante) -->
       <div class="d-none d-md-block">
         <Swiper :modules="[Navigation, Pagination, Autoplay]" :space-between="30" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" navigation pagination class="swiper-oligume">
           <SwiperSlide>
-            <img :src="bannerAceite" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
+            <img :src="bannerCyber" alt="CyberWow" class="w-100" loading="lazy" />
             <a
               href="https://wa.me/51941498032"
               target="_blank"
@@ -73,11 +56,28 @@ const gtagEvent = () => {
               class="btn btn-success btn-lg boton-whatsapp"
               @click="gtagEvent"
             >
-              Compra Aquí
+              Ofertas Cyber
             </a>
           </SwiperSlide>
           <SwiperSlide>
+            <img :src="bannerAceite" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
+            <!-- <a
+              href="https://wa.me/51941498032"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-success btn-lg boton-whatsapp"
+              @click="gtagEvent"
+            >
+              Compra Aquí
+            </a> -->
+          </SwiperSlide>
+          <SwiperSlide>
             <img :src="bannerAceituna" alt="Aceitunas negras naturales Oligume" class="w-100" loading="lazy" />
+            <div class="wrap-slider">
+              <div class="title-slider">
+                SOMOS PRODUCTORES DE ACEITUNAS Y ACEITE DE OLIVA
+              </div>
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -85,9 +85,9 @@ const gtagEvent = () => {
         <!-- Slider para móvil (visible solo en xs a sm) -->
       <div class="d-block d-md-none">
         <Swiper :modules="[Autoplay]" :space-between="10" :slides-per-view="1" :loop="true"
-          :autoplay="{ delay: 4000 }" pagination class="swiper-oligume">
+          :autoplay="{ delay: 5000 }" pagination class="swiper-oligume">
           <SwiperSlide>
-            <img :src="bannerMovil1" alt="Banner móvil 1" class="w-100" loading="lazy" />
+            <img :src="bannerCyberMovil" alt="Cyber" class="w-100" loading="lazy" />
             <a
               href="https://wa.me/51941498032"
               target="_blank"
@@ -95,11 +95,28 @@ const gtagEvent = () => {
               class="btn btn-success btn-sm boton-whatsapp"
               @click="gtagEvent"
             >
-              Comprar
+              Cyber Ofertas
             </a>
           </SwiperSlide>
           <SwiperSlide>
+            <img :src="bannerMovil1" alt="Banner móvil 1" class="w-100" loading="lazy" />
+            <!-- <a
+              href="https://wa.me/51941498032"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-success btn-sm boton-whatsapp"
+              @click="gtagEvent"
+            >
+              Comprar
+            </a> -->
+          </SwiperSlide>
+          <SwiperSlide>
             <img :src="bannerMovil2" alt="Banner móvil 2" class="w-100" loading="lazy" />
+            <div class="wrap-slider">
+              <div class="title-slider">
+                SOMOS PRODUCTORES DE ACEITUNAS Y ACEITE DE OLIVA
+              </div>
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -121,7 +138,7 @@ const gtagEvent = () => {
             />
             <div class="card-body">
               <h5 class="card-title">{{ producto.nombre }}</h5>
-              <p class="text-warning mb-1">★★★★★</p>
+              <span class="text-decoration-line-through">S/.{{ producto.precioOld }}</span>
               <p class="card-text fw-semibold">S/. {{ producto.precio }}</p>
               <NuxtLink
                 :to="`/producto/${producto.slug}`"

@@ -38,7 +38,7 @@ useHead({
                         <div class="product-img position-relative">
                             <div class="avatar-sm product-ribbon">
                                 <span class="avatar-title rounded-circle  bg-primary">
-                                    - 10 %
+                                    - 15 %
                                 </span>
                             </div>
                             <img src="@/assets/cyber/oferta1.png" alt="" class="img-fluid mx-auto d-block">
@@ -60,6 +60,11 @@ useHead({
                 <div class="card">
                     <div class="card-body">
                         <div class="product-img position-relative">
+                            <div class="avatar-sm product-ribbon">
+                                <span class="avatar-title rounded-circle  bg-primary">
+                                    - 12 %
+                                </span>
+                            </div>
                             <img src="@/assets/cyber/oferta2.png" alt="" class="img-fluid mx-auto d-block">
                         </div>
                         <div class="mt-4 text-center">
@@ -79,11 +84,11 @@ useHead({
                 <div class="card">
                     <div class="card-body">
                         <div class="product-img position-relative">
-                            <div class="avatar-sm product-ribbon">
+                            <!-- <div class="avatar-sm product-ribbon">
                                 <span class="avatar-title rounded-circle  bg-primary">
                                     - 20 %
                                 </span>
-                            </div>
+                            </div> -->
                             <img src="@/assets/cyber/oferta3.png" alt="" class="img-fluid mx-auto d-block">
                         </div>
                         <div class="mt-4 text-center">
