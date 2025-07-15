@@ -11858,3 +11858,13 @@ a {
     position: relative;
     left: 30px;
 } */
+
+.badge-delivery {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-block;
+}

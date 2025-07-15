@@ -83,9 +83,12 @@ const textoNutricional = computed(() => {
           </div>
           <div class="col-md-6">
             <h1 class="mb-3">{{ producto.nombre }}</h1>
-            <div class="fs-5 mb-4">PRECIO:
+            <div class="fs-5 mb-3">PRECIO:
               <span class="text-decoration-line-through me-1">S/.{{ producto.precioOld }} </span>
               <span class="precio-real"> S/.{{ producto.precio }}</span>
+            </div>
+            <div v-if="producto.entregaGratis" class="badge-delivery mb-4">
+              🚚 <strong>¡Delivery GRATIS en Lima Metropolitana!</strong>
             </div>
             <ul class="data-producto">
               <li>Marca: <span>Oligume</span></li>
