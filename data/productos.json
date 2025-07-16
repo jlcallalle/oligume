@@ -8,7 +8,8 @@
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-500ml.png",
     "peso_en": "500 ml",
-    "entregaGratis": false
+    "entregaGratis": false,
+    "categoria": "unidad"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-litro.png",
     "peso_en": "1000 ml",
-    "entregaGratis": true
+    "entregaGratis": false,
+    "categoria": "unidad"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-bidon.png",
     "peso_en": "3000 ml",
-    "entregaGratis": true
+    "entregaGratis": true,
+    "categoria": "unidad"
   },
   {
     "id": 4,
@@ -39,9 +42,10 @@
     "precio": 15,
     "precioOld": 18,
     "descripcion": "Aceitunas negras seleccionadas.",
-    "imagen": "/img/aceituna-negra-medio.jpg",
+    "imagen": "/img/aceituna-negra-medio.png",
     "peso_en": "500 gr",
-    "entregaGratis": false
+    "entregaGratis": false,
+    "categoria": "unidad"
   },
   {
     "id": 5,
@@ -50,9 +54,10 @@
     "precio": 30,
     "precioOld": 32,
     "descripcion": "Bolsa de aceitunas negras grandes.",
-    "imagen": "/img/aceituna-negro-kg.jpg",
+    "imagen": "/img/aceituna-negro-kg.png",
     "peso_en": "1000 gr",
-    "entregaGratis": false
+    "entregaGratis": false,
+    "categoria": "unidad"
   },
   {
     "id": 6,
@@ -61,9 +66,10 @@
     "precio": 15,
     "precioOld": 18,
     "descripcion": "Aceitunas verdes seleccionadas.",
-    "imagen": "/img/aceituna-verde-medio.jpg",
+    "imagen": "/img/aceituna-verde-medio.png",
     "peso_en": "500 gr",
-    "entregaGratis": false
+    "entregaGratis": false,
+    "categoria": "unidad"
   },
   {
     "id": 7,
@@ -72,8 +78,45 @@
     "precio": 30,
     "precioOld": 32,
     "descripcion": "Bolsa de aceitunas verdes frescas.",
-    "imagen": "/img/aceituna-verde-kg.jpg",
+    "imagen": "/img/aceituna-verde-kg.png",
     "peso_en": "1000 gr",
-    "entregaGratis": false
+    "entregaGratis": false,
+    "categoria": "unidad"
+  },
+  {
+    "id": 8,
+    "nombre": "Promo Pack Aceitera",
+    "slug": "promo-pack-aceitera",
+    "precio": 75,
+    "precioOld": 90,
+    "descripcion": "1Lt Aceite de Oliva + 1kg Aceitunas Negras.",
+    "imagen": "/img/oferta3.png",
+    "peso_en": "1000 gr",
+    "entregaGratis": true,
+    "categoria": "promocion"
+  },
+  {
+    "id": 9,
+    "nombre": "Promo Pack Aceituna",
+    "slug": "promo-pack-aceituna",
+    "precio": 64,
+    "precioOld": 75,
+    "descripcion": "1 Lt Aceite de Oliva + 1/2 kg Aceitunas Negra o verde",
+    "imagen": "/img/oferta4.png",
+    "peso_en": "1 Lt",
+    "entregaGratis": true,
+    "categoria": "promocion"
+  },
+  {
+    "id": 10,
+    "nombre": "Promo Pack 2 Litros",
+    "slug": "promo-pack-aceite-2litros",
+    "precio": 98,
+    "precioOld": 120,
+    "descripcion": "2Lt Aceite de Oliva Extra Virgen.",
+    "imagen": "/img/oferta5.png",
+    "peso_en": "2 Lt",
+    "entregaGratis": true,
+    "categoria": "promocion"
   }
 ]

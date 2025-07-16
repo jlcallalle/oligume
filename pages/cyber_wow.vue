@@ -36,11 +36,11 @@ useHead({
                 <div class="card">
                     <div class="card-body">
                         <div class="product-img position-relative">
-                            <div class="avatar-sm product-ribbon">
+                            <!-- <div class="avatar-sm product-ribbon">
                                 <span class="avatar-title rounded-circle  bg-primary">
                                     - 15 %
                                 </span>
-                            </div>
+                            </div> -->
                             <img src="@/assets/cyber/oferta1.png" alt="" class="img-fluid mx-auto d-block">
                         </div>
                         <div class="mt-4 text-center">
@@ -60,11 +60,11 @@ useHead({
                 <div class="card">
                     <div class="card-body">
                         <div class="product-img position-relative">
-                            <div class="avatar-sm product-ribbon">
+                            <!-- <div class="avatar-sm product-ribbon">
                                 <span class="avatar-title rounded-circle  bg-primary">
                                     - 12 %
                                 </span>
-                            </div>
+                            </div> -->
                             <img src="@/assets/cyber/oferta2.png" alt="" class="img-fluid mx-auto d-block">
                         </div>
                         <div class="mt-4 text-center">
@@ -84,18 +84,13 @@ useHead({
                 <div class="card">
                     <div class="card-body">
                         <div class="product-img position-relative">
-                            <!-- <div class="avatar-sm product-ribbon">
-                                <span class="avatar-title rounded-circle  bg-primary">
-                                    - 20 %
-                                </span>
-                            </div> -->
                             <img src="@/assets/cyber/oferta3.png" alt="" class="img-fluid mx-auto d-block">
                         </div>
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">1 Litro Aceite de Oliva + 1kg de Aceitunas</h5>
-                            <h5 class="my-0"><span class="text-muted me-2"><del>S/80</del></span> <b>S/75</b></h5>
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/90</del></span> <b>S/75</b></h5>
                             <NuxtLink
-                                :to="`producto/aceite-oliva-1lt`"
+                                :to="`producto/promo-pack-aceitera`"
                                 class="btn-cyber btn btn-success mt-3"
                             >
                                 Ver Detalle
@@ -111,10 +106,29 @@ useHead({
                             <img src="@/assets/cyber/oferta4.png" alt="" class="img-fluid mx-auto d-block">
                         </div>
                         <div class="mt-4 text-center">
-                            <h5 class="mb-3 text-truncate">1/2 Litro Aceite de Oliva</h5>
-                            <h5 class="my-0"><span class="text-muted me-2"><del>S/35</del></span> <b>S/25</b></h5>
+                            <h5 class="mb-3 text-truncate">1 Litro Aceite de Oliva + 1/2 kg de Aceitunas negras o verdes</h5>
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/75</del></span> <b>S/64</b></h5>
                             <NuxtLink
-                                :to="`/producto/aceite-oliva-500ml`"
+                                :to="`producto/promo-pack-aceituna`"
+                                class="btn-cyber btn btn-success mt-3"
+                            >
+                                Ver Detalle
+                            </NuxtLink>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="product-img position-relative">
+                            <img src="@/assets/cyber/oferta5.png" alt="" class="img-fluid mx-auto d-block">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h5 class="mb-3 text-truncate">2 Litro Aceite de Oliva Extra Virgen</h5>
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/120</del></span> <b>S/98</b></h5>
+                            <NuxtLink
+                                :to="`producto/promo-pack-aceite-2litros`"
                                 class="btn-cyber btn btn-success mt-3"
                             >
                                 Ver Detalle

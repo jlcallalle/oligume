@@ -116,8 +116,10 @@ const gtagEvent = () => {
             />
             <div class="card-body">
               <h5 class="card-title">{{ producto.nombre }}</h5>
-              <span class="text-decoration-line-through">S/.{{ producto.precioOld }}</span>
-              <p class="card-text fw-semibold">S/. {{ producto.precio }}</p>
+              <div class="row-precio mb-2">
+                <span class="text-decoration-line-through me-2">S/.{{ producto.precioOld }}</span>
+                <span class="card-text fw-semibold">S/. {{ producto.precio }}</span>
+              </div>
               <NuxtLink
                 :to="`/producto/${producto.slug}`"
                 class="btn btn-outline-success btn-sm"
