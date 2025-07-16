@@ -69,7 +69,7 @@ const mostrarCyberWow = today.isAfter(dayjs('2025-07-14')) && today.isBefore(day
 
         </ul>
 
-        <div class="d-flex align-items-center whatsapp-header">
+        <div class="d-flex align-items-center whatsapp-header d-none d-md-block">
           <a
             href="https://wa.me/51941498032"
             target="_blank"

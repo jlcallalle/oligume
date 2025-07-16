@@ -11331,6 +11331,12 @@ a {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .nav-item .nav-link {
+    padding: 0.5rem;
+  }
+}
+
 .social-icons a {
   font-size: 23px;
   margin: 0 0 0 1rem;
@@ -11853,12 +11859,6 @@ a {
   }
 }
 
-/* 
-.nav-mobil-box {
-    position: relative;
-    left: 30px;
-} */
-
 .badge-delivery {
   background-color: #dff0d8;
   color: #3c763d;
@@ -11867,4 +11867,25 @@ a {
   font-size: 0.95rem;
   font-weight: 500;
   display: inline-block;
+}
+
+
+/* Reconocimiento */
+.carousel-item {
+  max-width: 650px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #a8a8a8;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: #198754;
+}
+
+.carousel-indicators {
+  bottom: -30px;
 }

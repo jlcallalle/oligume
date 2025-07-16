@@ -19,7 +19,7 @@
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-litro.png",
     "peso_en": "1000 ml",
-    "entregaGratis": false
+    "entregaGratis": true
   },
   {
     "id": 3,
