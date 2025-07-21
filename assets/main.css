@@ -11889,3 +11889,13 @@ a {
 .carousel-indicators {
   bottom: -30px;
 }
+
+.redes-header i {
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.redes-header a:hover i {
+  color: #2CB742; /* Verde oliva */
+}
+

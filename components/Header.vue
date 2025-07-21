@@ -60,14 +60,23 @@ const mostrarCyberWow = today.isAfter(dayjs('2025-07-14')) && today.isBefore(day
           <li class="nav-item">
             <NuxtLink class="nav-link" to="/contacto">Contacto</NuxtLink>
           </li>
-          <!-- <li class="nav-item nav-cyber">
+         <!--  <li v-if="mostrarCyberWow" class="nav-item nav-cyber">
             <NuxtLink class="nav-link" to="/cyber_wow">Cyber Wow</NuxtLink>
           </li> -->
-          <li v-if="mostrarCyberWow" class="nav-item nav-cyber">
-            <NuxtLink class="nav-link" to="/cyber_wow">Cyber Wow</NuxtLink>
-          </li>
-
         </ul>
+
+        <div class="d-flex align-items-center redes-header d-none d-md-flex me-3">
+          <a href="https://facebook.com/oligume" target="_blank" class="text-dark me-3" aria-label="Facebook">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://instagram.com/oligume" target="_blank" class="text-dark me-3" aria-label="Instagram">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://www.tiktok.com/@oligume" target="_blank" class="text-dark" aria-label="TikTok">
+            <i class="fab fa-tiktok fa-lg"></i>
+          </a>
+        </div>
+
 
         <div class="d-flex align-items-center whatsapp-header d-none d-md-block">
           <a

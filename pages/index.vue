@@ -48,17 +48,14 @@ const gtagEvent = () => {
         <Swiper :modules="[Navigation, Pagination, Autoplay]" :space-between="30" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" navigation pagination class="swiper-oligume">
           <SwiperSlide>
-            <img :src="bannerCyber" alt="CyberWow" class="w-100" loading="lazy" />
+            <img :src="bannerAceite" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
             <NuxtLink
               to="/cyber_wow"
               class="btn btn-success btn-lg boton-whatsapp"
               @click="gtagEvent"
             >
-              Ofertas Cyber
+              Contáctanos
             </NuxtLink>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img :src="bannerAceite" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
           </SwiperSlide>
           <SwiperSlide>
             <img :src="bannerAceituna" alt="Aceitunas negras naturales Oligume" class="w-100" loading="lazy" />
@@ -75,16 +72,6 @@ const gtagEvent = () => {
       <div class="d-block d-md-none">
         <Swiper :modules="[Autoplay]" :space-between="10" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" pagination class="swiper-oligume">
-          <SwiperSlide>
-            <img :src="bannerCyberMovil" alt="Cyber" class="w-100" loading="lazy" />
-            <NuxtLink
-              to="/cyber_wow"
-              class="btn btn-success btn-sm boton-whatsapp"
-              @click="gtagEvent"
-            >
-              Cyber Ofertas
-            </NuxtLink>
-          </SwiperSlide>
           <SwiperSlide>
             <img :src="bannerMovil1" alt="Banner móvil 1" class="w-100" loading="lazy" />
           </SwiperSlide>
@@ -147,20 +134,5 @@ const gtagEvent = () => {
     object-position: center center; 
   }
 }
-
-
-/* @media (max-width: 768px) {
-  .swiper-oligume img {
-    height: 250px;
-    object-fit: cover;
-    object-position: center center;
-  }
-  .boton-whatsapp {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-} */
 
 </style>
