@@ -15,7 +15,7 @@
     "id": 2,
     "nombre": "Aceite de Oliva 1 Lt",
     "slug": "aceite-oliva-1lt",
-    "precio": 49.90,
+    "precio": 50,
     "precioOld": 60,
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-litro.png",
@@ -92,31 +92,7 @@
     "descripcion": "1Lt Aceite de Oliva + 1kg Aceitunas Negras.",
     "imagen": "/img/oferta3.png",
     "peso_en": "1000 gr",
-    "entregaGratis": true,
-    "categoria": "promocion"
-  },
-  {
-    "id": 9,
-    "nombre": "Promo Pack Aceituna",
-    "slug": "promo-pack-aceituna",
-    "precio": 64,
-    "precioOld": 75,
-    "descripcion": "1 Lt Aceite de Oliva + 1/2 kg Aceitunas Negra o verde",
-    "imagen": "/img/oferta4.png",
-    "peso_en": "1 Lt",
-    "entregaGratis": true,
-    "categoria": "promocion"
-  },
-  {
-    "id": 10,
-    "nombre": "Promo Pack 2 Litros",
-    "slug": "promo-pack-aceite-2litros",
-    "precio": 98,
-    "precioOld": 120,
-    "descripcion": "2Lt Aceite de Oliva Extra Virgen.",
-    "imagen": "/img/oferta5.png",
-    "peso_en": "2 Lt",
-    "entregaGratis": true,
+    "entregaGratis": false,
     "categoria": "promocion"
   }
 ]
