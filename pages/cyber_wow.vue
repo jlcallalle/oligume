@@ -25,7 +25,7 @@ useHead({
   <div class="wrap-detalle-producto">
       <div class="producto-header">
         <div class="container">
-          <h1>Cyber Wow - Desde el 14 al 17 Julio</h1>
+          <h1>Cyber Wow - Desde el 03 al 06 Noviembre</h1>
         </div>
       </div>
       <div class="producto-detalle">
@@ -45,7 +45,7 @@ useHead({
                         </div>
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">1 Litro Aceite de Oliva Extra Virgen </h5>
-                            <h5 class="my-0"><span class="text-muted me-2"><del>S/60</del></span> <b>S/49.90</b></h5>
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/60</del></span> <b>S/48.00</b></h5>
                             <NuxtLink
                                 :to="`producto/aceite-oliva-1lt`"
                                 class="btn-cyber btn btn-success mt-3"
@@ -89,12 +89,18 @@ useHead({
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">1 Litro Aceite de Oliva + 1kg de Aceitunas</h5>
                             <h5 class="my-0"><span class="text-muted me-2"><del>S/90</del></span> <b>S/75</b></h5>
-                            <NuxtLink
+                            <a
+                                :href="`https://wa.me/51941498032?text=👋%20Hola,%20deseo%20información%20sobre%20la%20promoción%20CyberWow`"
+                                target="_blank"
+                                class="btn btn-success mt-3">
+                                <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
+                            </a>
+                            <!-- <NuxtLink
                                 :to="`producto/promo-pack-aceitera`"
                                 class="btn-cyber btn btn-success mt-3"
                             >
                                 Ver Detalle
-                            </NuxtLink>
+                            </NuxtLink> -->
                         </div>
                     </div>
                 </div>
@@ -108,12 +114,18 @@ useHead({
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">1 Litro Aceite de Oliva + 1/2 kg de Aceitunas negras o verdes</h5>
                             <h5 class="my-0"><span class="text-muted me-2"><del>S/75</del></span> <b>S/64</b></h5>
-                            <NuxtLink
+                            <a
+                                :href="`https://wa.me/51941498032?text=👋%20Hola,%20deseo%20información%20sobre%20la%20promoción%20CyberWow`"
+                                target="_blank"
+                                class="btn btn-success mt-3">
+                                <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
+                            </a>
+                            <!-- <NuxtLink
                                 :to="`producto/promo-pack-aceituna`"
                                 class="btn-cyber btn btn-success mt-3"
                             >
                                 Ver Detalle
-                            </NuxtLink>
+                            </NuxtLink> -->
                         </div>
                     </div>
                 </div>
@@ -126,13 +138,19 @@ useHead({
                         </div>
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">2 Litro Aceite de Oliva Extra Virgen</h5>
-                            <h5 class="my-0"><span class="text-muted me-2"><del>S/120</del></span> <b>S/98</b></h5>
-                            <NuxtLink
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/120</del></span> <b>S/95</b></h5>
+                            <a
+                                :href="`https://wa.me/51941498032?text=👋%20Hola,%20deseo%20información%20sobre%20la%20promoción%20CyberWow`"
+                                target="_blank"
+                                class="btn btn-success mt-3">
+                                <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
+                            </a>
+                            <!-- <NuxtLink
                                 :to="`producto/promo-pack-aceite-2litros`"
                                 class="btn-cyber btn btn-success mt-3"
                             >
                                 Ver Detalle
-                            </NuxtLink>
+                            </NuxtLink> -->
                         </div>
                     </div>
                 </div>

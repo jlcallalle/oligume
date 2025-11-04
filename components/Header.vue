@@ -1,8 +1,9 @@
 <script setup>
 import logo from '@/assets/oligume.png'
+import banerwow from '@/assets/cyber/baner-wow.webp'
 import dayjs from 'dayjs'
 const today = dayjs()
-const mostrarCyberWow = today.isAfter(dayjs('2025-07-14')) && today.isBefore(dayjs('2025-07-18'))
+const mostrarCyberWow = today.isAfter(dayjs('2025-11-03')) && today.isBefore(dayjs('2025-11-06'))
 </script>
 
 <template>
@@ -60,9 +61,9 @@ const mostrarCyberWow = today.isAfter(dayjs('2025-07-14')) && today.isBefore(day
           <li class="nav-item">
             <NuxtLink class="nav-link" to="/contacto">Contacto</NuxtLink>
           </li>
-         <!--  <li v-if="mostrarCyberWow" class="nav-item nav-cyber">
+          <li v-if="mostrarCyberWow" class="nav-item nav-cyber">
             <NuxtLink class="nav-link" to="/cyber_wow">Cyber Wow</NuxtLink>
-          </li> -->
+          </li>
         </ul>
 
         <div class="d-flex align-items-center redes-header d-none d-md-flex me-3">
@@ -107,6 +108,9 @@ const mostrarCyberWow = today.isAfter(dayjs('2025-07-14')) && today.isBefore(day
       </div>
     </div>
   </nav>
+  <div class="banner-wow">
+    <img :src="banerwow" alt="Cyber wow"/>
+  </div>
 </template>
 <style>
 
@@ -115,4 +119,12 @@ const mostrarCyberWow = today.isAfter(dayjs('2025-07-14')) && today.isBefore(day
   margin-right: 1rem;
 }
 
+.banner-wow {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-wow img {
+  width: 100%;
+}
 </style>

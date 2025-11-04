@@ -9,8 +9,9 @@
   import bannerAceituna from '@/assets/banner-aceituna.png'
   import bannerMovil1 from '@/assets/banner-movil-1.png'
   import bannerMovil2 from '@/assets/banner-movil-2.png'
-  import bannerCyber from '@/assets/cyber/banner_cyber.png'
-  import bannerCyberMovil from '@/assets/cyber/banner_cyber_movil.png'
+  import bannerMovil3 from '@/assets/banner-mayor.png'
+  import bannerCyber from '@/assets/cyber/banner_cover.webp'
+  import bannerCyberMovil from '@/assets/cyber/cyber_mobile.png'
   
 
   import productos from '@/data/productos.json'
@@ -48,6 +49,16 @@ const gtagEvent = () => {
         <Swiper :modules="[Navigation, Pagination, Autoplay]" :space-between="30" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" navigation pagination class="swiper-oligume">
           <SwiperSlide>
+            <img :src="bannerCyber" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
+            <NuxtLink
+              to="/cyber_wow"
+              class="btn btn-success btn-lg boton-whatsapp"
+              @click="gtagEvent"
+            >
+              Contáctanos
+            </NuxtLink>
+          </SwiperSlide>
+          <SwiperSlide>
             <img :src="bannerAceite" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
             <NuxtLink
               to="/cyber_wow"
@@ -61,7 +72,7 @@ const gtagEvent = () => {
             <img :src="bannerAceituna" alt="Aceitunas negras naturales Oligume" class="w-100" loading="lazy" />
             <div class="wrap-slider">
               <div class="title-slider">
-                SOMOS PRODUCTORES DE ACEITUNAS Y ACEITE DE OLIVA
+                SOMOS PRODUCTORES DE ACEITUNAS ECOLÓGICAS Y ACEITE DE OLIVA EXTRA VIRGEN
               </div>
             </div>
           </SwiperSlide>
@@ -72,6 +83,16 @@ const gtagEvent = () => {
       <div class="d-block d-md-none">
         <Swiper :modules="[Autoplay]" :space-between="10" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" pagination class="swiper-oligume">
+          <SwiperSlide>
+            <img :src="bannerCyberMovil" alt="Cyber Wow 2025" class="w-100" loading="lazy" />
+            <NuxtLink
+              to="/cyber_wow"
+              class="btn btn-success btn-lg boton-whatsapp"
+              @click="gtagEvent"
+            >
+              Contáctanos
+            </NuxtLink>
+          </SwiperSlide>
           <SwiperSlide>
             <img :src="bannerMovil1" alt="Banner móvil 1" class="w-100" loading="lazy" />
           </SwiperSlide>

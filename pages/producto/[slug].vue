@@ -41,10 +41,11 @@ const textoDescripcion = computed(() => {
   if (!producto) return ''
 
   const nombre = producto.nombre.toLowerCase()
+
   if (nombre.includes('aceite de oliva')) {
-    return `Nuestro aceite de oliva extra virgen es obtenido por extracción en frío, lo que garantiza la conservación de sus propiedades naturales. Rico en antioxidantes, vitamina E y grasas saludables, es ideal para ensaladas, panes y preparaciones gourmet.`
+    return `Nuestro aceite de oliva extra virgen Oligume es elaborado mediante extracción en frío, lo que garantiza la conservación de sus propiedades naturales, aroma fresco y sabor auténtico. Rico en antioxidantes, vitamina E y grasas saludables, ayuda a cuidar tu salud y realzar el sabor de tus comidas. Producido con olivas cuidadosamente seleccionadas del valle de Acarí – Arequipa, es perfecto para ensaladas, panes, pastas, carnes y preparaciones gourmet. 100 % natural, sin aditivos ni conservantes.`
   } else if (nombre.includes('aceituna')) {
-    return `Nuestras aceitunas ecológicas provienen del Valle de Acarí, Arequipa. Cultivadas de forma natural, sin pesticidas, con un sabor auténtico y textura firme. Perfectas para acompañar tus comidas o como snack saludable.`
+    return `Nuestras aceitunas Oligume provienen del valle de Acarí, Arequipa. Cultivadas de forma natural, sin pesticidas, conservan su sabor auténtico y textura firme. Son ideales para tablas de piqueos, ensaladas y como snack saludable en cualquier momento del día.`
   } else {
     return `Producto natural de la región de Arequipa, cultivado y procesado con los más altos estándares de calidad por Oligume.`
   }
@@ -54,10 +55,11 @@ const textoNutricional = computed(() => {
   if (!producto) return ''
 
   const nombre = producto.nombre.toLowerCase()
+
   if (nombre.includes('aceite de oliva')) {
-    return `El aceite de oliva extra virgen aporta grasas monoinsaturadas saludables que ayudan a reducir el colesterol malo. Contiene antioxidantes naturales, polifenoles y vitamina E, beneficiosos para la salud cardiovascular.`
+    return `El aceite de oliva extra virgen Oligume aporta grasas monoinsaturadas saludables que ayudan a reducir el colesterol LDL ("malo") y mantener el colesterol HDL ("bueno"). Contiene antioxidantes naturales, polifenoles y vitamina E, compuestos beneficiosos para la salud cardiovascular y la protección de las células frente al estrés oxidativo. Porción referencial (1 cda – 15 ml): Energía 120 kcal; Grasas totales 14 g (saturadas 2 g, monoinsaturadas 10 g, poliinsaturadas 1 g); Sodio 0 mg; Carbohidratos 0 g; Proteínas 0 g. Valores aproximados.`
   } else if (nombre.includes('aceituna')) {
-    return `Las aceitunas son fuente de fibra, hierro, calcio y vitamina E. Su contenido en antioxidantes y ácidos grasos saludables contribuye a la salud digestiva y cardiovascular.`
+    return `Las aceitunas Oligume son fuente de fibra, hierro, calcio y vitamina E. Su contenido de antioxidantes y ácidos grasos saludables contribuye a la salud cardiovascular y digestiva. Consumidas con moderación, son un excelente complemento dentro de una alimentación equilibrada.`
   } else {
     return `Consulta los valores nutricionales específicos del producto según presentación y origen.`
   }
@@ -87,8 +89,11 @@ const textoNutricional = computed(() => {
               <span class="text-decoration-line-through me-1">S/.{{ producto.precioOld }} </span>
               <span class="precio-real"> S/.{{ producto.precio }}</span>
             </div>
-            <div v-if="producto.entregaGratis" class="badge-delivery mb-4">
+            <!-- <div v-if="producto.entregaGratis" class="badge-delivery mb-4">
               🚚 <strong>¡Delivery GRATIS en Lima Metropolitana!</strong>
+            </div> -->
+            <div v-if="producto.entregaGratis" class="badge-delivery mb-4">
+              🚚 <strong>¡ GRATIS Jarrita dispensaror de Aceite!</strong>
             </div>
             <ul class="data-producto">
               <li>Marca: <span>Oligume</span></li>
@@ -136,15 +141,91 @@ const textoNutricional = computed(() => {
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <p>{{ textoDescripcion }}</p>
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <!-- <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
               <p>{{ textoNutricional }}</p>
+            </div> -->
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <!-- Aceite de oliva -->
+              <template v-if="producto && producto.nombre.toLowerCase().includes('aceite de oliva')">
+                <p>
+                  El aceite de oliva extra virgen Oligume aporta grasas monoinsaturadas saludables que ayudan a reducir el colesterol LDL ("malo")
+                  y mantener el colesterol HDL ("bueno"). Contiene antioxidantes naturales, polifenoles y vitamina E,
+                  compuestos beneficiosos para la salud cardiovascular y la protección de las células frente al estrés oxidativo.
+                </p>
+
+                <table class="table table-bordered mt-3" style="max-width: 500px;">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Componente</th>
+                      <th>Cantidad por porción (1 cda – 15 ml)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Energía</td><td>120 kcal</td></tr>
+                    <tr><td>Grasas totales</td><td>14 g</td></tr>
+                    <tr><td>&nbsp;&nbsp;Saturadas</td><td>2 g</td></tr>
+                    <tr><td>&nbsp;&nbsp;Monoinsaturadas</td><td>10 g</td></tr>
+                    <tr><td>&nbsp;&nbsp;Poliinsaturadas</td><td>1 g</td></tr>
+                    <tr><td>Sodio</td><td>0 mg</td></tr>
+                    <tr><td>Carbohidratos</td><td>0 g</td></tr>
+                    <tr><td>Proteínas</td><td>0 g</td></tr>
+                  </tbody>
+                </table>
+                <p class="text-muted"><em>Valores aproximados.</em></p>
+              </template>
+
+              <!-- Aceitunas -->
+              <template v-else-if="producto && producto.nombre.toLowerCase().includes('aceituna')">
+                <p>{{ textoNutricional }}</p>
+
+                <table class="table table-bordered mt-3" style="max-width: 500px;">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Componente</th>
+                      <th>Cantidad por 100 g</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Energía</td><td>115 kcal</td></tr>
+                    <tr><td>Grasas totales</td><td>11 g</td></tr>
+                    <tr><td>&nbsp;&nbsp;Saturadas</td><td>1.5 g</td></tr>
+                    <tr><td>&nbsp;&nbsp;Monoinsaturadas</td><td>7.5 g</td></tr>
+                    <tr><td>&nbsp;&nbsp;Poliinsaturadas</td><td>1 g</td></tr>
+                    <tr><td>Carbohidratos</td><td>0.5 g</td></tr>
+                    <tr><td>Azúcares</td><td>0 g</td></tr>
+                    <tr><td>Fibra</td><td>3 g</td></tr>
+                    <tr><td>Proteínas</td><td>0.8 g</td></tr>
+                    <tr><td>Sodio</td><td>735 mg</td></tr>
+                  </tbody>
+                </table>
+                <p class="text-muted"><em>Valores aproximados.</em></p>
+              </template>
+
+              <!-- Otros productos -->
+              <template v-else>
+                <p>{{ textoNutricional }}</p>
+              </template>
             </div>
+
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             
-              <p>
+             <!--  <p>
                 Realizamos envíos a todos los distritos de Lima Metropolitana y Callao. Para envíos a provincias, trabajamos con agencias de transporte confiables como Shalom, Olva Courier u otra de preferencia del cliente. El costo de envío será calculado al momento de la cotización, según destino y proveedor seleccionado.
-              </p>
+              </p> -->
+
+              <p>
+                  Realizamos envíos a todos los distritos de <strong>Lima Metropolitana y Callao</strong>.<br>
+                  Para envíos a <strong>provincias</strong>, trabajamos con agencias de transporte confiables como
+                  <strong>Shalom</strong>, <strong>Olva Courier</strong> u otra de preferencia del cliente.<br>
+                  El <strong>costo de envío</strong> se calcula según el destino y el peso del pedido y se confirma al momento de cerrar la compra.<br>
+                  También puedes <strong>coordinar el recojo</strong> en nuestras tiendas de <strong>Comas (Lima)</strong> o
+                  <strong>Acarí (Arequipa)</strong> previa coordinación por WhatsApp.
+                </p>
+
+              
             </div>
+
+            
           </div>
         </div>
       </div>
