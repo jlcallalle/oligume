@@ -48,7 +48,7 @@ const gtagEvent = () => {
       <div class="d-none d-md-block">
         <Swiper :modules="[Navigation, Pagination, Autoplay]" :space-between="30" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" navigation pagination class="swiper-oligume">
-          <SwiperSlide>
+          <!-- <SwiperSlide>
             <img :src="bannerCyber" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
             <NuxtLink
               to="/cyber_wow"
@@ -57,7 +57,7 @@ const gtagEvent = () => {
             >
               Contáctanos
             </NuxtLink>
-          </SwiperSlide>
+          </SwiperSlide> -->
           <SwiperSlide>
             <img :src="bannerAceite" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
             <NuxtLink
@@ -72,7 +72,7 @@ const gtagEvent = () => {
             <img :src="bannerAceituna" alt="Aceitunas negras naturales Oligume" class="w-100" loading="lazy" />
             <div class="wrap-slider">
               <div class="title-slider">
-                SOMOS PRODUCTORES DE ACEITUNAS ECOLÓGICAS Y ACEITE DE OLIVA EXTRA VIRGEN
+                Productores de Aceitunas y Aceite de Oliva del Valle de Acarí, Arequipa.
               </div>
             </div>
           </SwiperSlide>
@@ -83,7 +83,7 @@ const gtagEvent = () => {
       <div class="d-block d-md-none">
         <Swiper :modules="[Autoplay]" :space-between="10" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" pagination class="swiper-oligume">
-          <SwiperSlide>
+          <!-- <SwiperSlide>
             <img :src="bannerCyberMovil" alt="Cyber Wow 2025" class="w-100" loading="lazy" />
             <NuxtLink
               to="/cyber_wow"
@@ -92,7 +92,7 @@ const gtagEvent = () => {
             >
               Contáctanos
             </NuxtLink>
-          </SwiperSlide>
+          </SwiperSlide> -->
           <SwiperSlide>
             <img :src="bannerMovil1" alt="Banner móvil 1" class="w-100" loading="lazy" />
           </SwiperSlide>
@@ -100,7 +100,7 @@ const gtagEvent = () => {
             <img :src="bannerMovil2" alt="Banner móvil 2" class="w-100" loading="lazy" />
             <div class="wrap-slider">
               <div class="title-slider">
-                SOMOS PRODUCTORES DE ACEITUNAS Y ACEITE DE OLIVA
+                 Productores de Aceitunas y Aceite de Oliva del Valle de Acarí, Arequipa.
               </div>
             </div>
           </SwiperSlide>

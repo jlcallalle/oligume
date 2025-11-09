@@ -95,12 +95,6 @@ useHead({
                                 class="btn btn-success mt-3">
                                 <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
                             </a>
-                            <!-- <NuxtLink
-                                :to="`producto/promo-pack-aceitera`"
-                                class="btn-cyber btn btn-success mt-3"
-                            >
-                                Ver Detalle
-                            </NuxtLink> -->
                         </div>
                     </div>
                 </div>
@@ -120,12 +114,6 @@ useHead({
                                 class="btn btn-success mt-3">
                                 <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
                             </a>
-                            <!-- <NuxtLink
-                                :to="`producto/promo-pack-aceituna`"
-                                class="btn-cyber btn btn-success mt-3"
-                            >
-                                Ver Detalle
-                            </NuxtLink> -->
                         </div>
                     </div>
                 </div>
@@ -145,12 +133,6 @@ useHead({
                                 class="btn btn-success mt-3">
                                 <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
                             </a>
-                            <!-- <NuxtLink
-                                :to="`producto/promo-pack-aceite-2litros`"
-                                class="btn-cyber btn btn-success mt-3"
-                            >
-                                Ver Detalle
-                            </NuxtLink> -->
                         </div>
                     </div>
                 </div>

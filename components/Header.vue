@@ -1,9 +1,9 @@
 <script setup>
 import logo from '@/assets/oligume.png'
-import banerwow from '@/assets/cyber/baner-wow.webp'
+// import banerwow from '@/assets/cyber/baner-wow.webp'
 import dayjs from 'dayjs'
 const today = dayjs()
-const mostrarCyberWow = today.isAfter(dayjs('2025-11-03')) && today.isBefore(dayjs('2025-11-06'))
+const mostrarCyberWow = today.isAfter(dayjs('2025-11-03')) && today.isBefore(dayjs('2025-11-09'))
 </script>
 
 <template>
@@ -108,9 +108,9 @@ const mostrarCyberWow = today.isAfter(dayjs('2025-11-03')) && today.isBefore(day
       </div>
     </div>
   </nav>
-  <div class="banner-wow">
+  <!-- <div class="banner-wow">
     <img :src="banerwow" alt="Cyber wow"/>
-  </div>
+  </div> -->
 </template>
 <style>
 
