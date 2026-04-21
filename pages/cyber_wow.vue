@@ -25,7 +25,7 @@ useHead({
   <div class="wrap-detalle-producto">
       <div class="producto-header">
         <div class="container">
-          <h1>Cyber Wow - Desde el 03 al 06 Noviembre</h1>
+          <h1>Cyber Wow - Desde el 20 al 23 Abril</h1>
         </div>
       </div>
       <div class="producto-detalle">
@@ -45,7 +45,7 @@ useHead({
                         </div>
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">1 Litro Aceite de Oliva Extra Virgen </h5>
-                            <h5 class="my-0"><span class="text-muted me-2"><del>S/60</del></span> <b>S/48.00</b></h5>
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/60</del></span> <b>S/50.00</b></h5>
                             <NuxtLink
                                 :to="`producto/aceite-oliva-1lt`"
                                 class="btn-cyber btn btn-success mt-3"
@@ -69,7 +69,7 @@ useHead({
                         </div>
                         <div class="mt-4 text-center">
                             <h5 class="mb-3 text-truncate">3 Litro Aceite de Oliva Extra Virgen </h5>
-                            <h5 class="my-0"><span class="text-muted me-2"><del>S/160</del></span> <b>S/140</b></h5>
+                            <h5 class="my-0"><span class="text-muted me-2"><del>S/160</del></span> <b>S/150</b></h5>
                             <NuxtLink
                                 :to="`/producto/aceite-oliva-3lt`"
                                 class="btn-cyber btn btn-success mt-3"

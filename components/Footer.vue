@@ -60,7 +60,7 @@ import logo from '@/assets/oligume.png'
             <div class="border-top py-4" style="border-color: #1d1d1d !important">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p class="small text-muted mb-0 text-center">© 2024 All rights reserved.</p>
+                        <p class="small text-muted mb-0 text-center">© 2026 All rights reserved.</p>
                     </div>
                 </div>
             </div>

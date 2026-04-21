@@ -27,12 +27,12 @@
     "id": 3,
     "nombre": "Aceite de Oliva 3 Lt",
     "slug": "aceite-oliva-3lt",
-    "precio": 140,
+    "precio": 150,
     "precioOld": 160,
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-bidon.png",
     "peso_en": "3000 ml",
-    "entregaGratis": true,
+    "entregaGratis": false,
     "categoria": "unidad"
   },
   {

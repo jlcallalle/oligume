@@ -10,7 +10,7 @@
   import bannerMovil1 from '@/assets/banner-movil-1.png'
   import bannerMovil2 from '@/assets/banner-movil-2.png'
   import bannerMovil3 from '@/assets/banner-mayor.png'
-  import bannerCyber from '@/assets/cyber/banner_cover.webp'
+  import bannerCyber from '@/assets/cyber/banner_cover.png'
   import bannerCyberMovil from '@/assets/cyber/cyber_mobile.png'
   
 
@@ -48,7 +48,7 @@ const gtagEvent = () => {
       <div class="d-none d-md-block">
         <Swiper :modules="[Navigation, Pagination, Autoplay]" :space-between="30" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" navigation pagination class="swiper-oligume">
-          <!-- <SwiperSlide>
+          <SwiperSlide>
             <img :src="bannerCyber" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
             <NuxtLink
               to="/cyber_wow"
@@ -57,7 +57,7 @@ const gtagEvent = () => {
             >
               Contáctanos
             </NuxtLink>
-          </SwiperSlide> -->
+          </SwiperSlide>
           <SwiperSlide>
             <img :src="bannerAceite" alt="Aceite de oliva extra virgen Oligume" class="w-100" loading="lazy" />
             <NuxtLink
@@ -83,7 +83,7 @@ const gtagEvent = () => {
       <div class="d-block d-md-none">
         <Swiper :modules="[Autoplay]" :space-between="10" :slides-per-view="1" :loop="true"
           :autoplay="{ delay: 5000 }" pagination class="swiper-oligume">
-          <!-- <SwiperSlide>
+          <SwiperSlide>
             <img :src="bannerCyberMovil" alt="Cyber Wow 2025" class="w-100" loading="lazy" />
             <NuxtLink
               to="/cyber_wow"
@@ -92,7 +92,7 @@ const gtagEvent = () => {
             >
               Contáctanos
             </NuxtLink>
-          </SwiperSlide> -->
+          </SwiperSlide>
           <SwiperSlide>
             <img :src="bannerMovil1" alt="Banner móvil 1" class="w-100" loading="lazy" />
           </SwiperSlide>
