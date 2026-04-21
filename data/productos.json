@@ -7,6 +7,11 @@
     "precioOld": 35,
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-500ml.png",
+    "imagenes": [
+      "/img/aceite-500ml.png",
+      "/img/aceite-500ml-2.png",
+      "/img/aceite-500ml-3.png"
+    ],
     "peso_en": "500 ml",
     "entregaGratis": false,
     "categoria": "unidad"
@@ -19,6 +24,11 @@
     "precioOld": 60,
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-litro.png",
+    "imagenes": [
+      "/img/aceite-litro.png",
+      "/img/aceite-litro-2.png",
+      "/img/aceite-litro-3.png"
+    ],
     "peso_en": "1000 ml",
     "entregaGratis": false,
     "categoria": "unidad"
@@ -31,6 +41,11 @@
     "precioOld": 160,
     "descripcion": "Aceite de oliva extra virgen de alta calidad.",
     "imagen": "/img/aceite-bidon.png",
+    "imagenes": [
+      "/img/aceite-bidon.png",
+      "/img/aceite-bidon-2.png",
+      "/img/aceite-bidon-3.png"
+    ],
     "peso_en": "3000 ml",
     "entregaGratis": false,
     "categoria": "unidad"

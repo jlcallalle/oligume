@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     'bootstrap/dist/css/bootstrap.min.css',
     '@fortawesome/fontawesome-free/css/all.min.css',
     'swiper/css',
+    'swiper/css/navigation',
+    'swiper/css/thumbs',
+    'swiper/css/free-mode',
+    'swiper/css',
     '@/assets/main.css'
   ],
   sitemap: {

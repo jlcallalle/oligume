@@ -1,12 +1,51 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
+import { computed, ref, nextTick } from 'vue'
+import { useHead } from '@unhead/vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Thumbs, FreeMode, Zoom } from 'swiper/modules'
 import productos from '@/data/productos.json'
 
 const route = useRoute()
 const slug = route.params.slug
-const producto = productos.find(p => p.slug === slug)
 
-// Título y descripción dinámicos para SEO
+const producto = productos.find((p: any) => p.slug === slug)
+
+const thumbsSwiper = ref<any>(null)
+const mainSwiper = ref<any>(null)
+
+const setThumbsSwiper = (swiper: any) => {
+  thumbsSwiper.value = swiper
+}
+
+const setMainSwiper = (swiper: any) => {
+  mainSwiper.value = swiper
+}
+
+const imagenesProducto = computed(() => {
+  if (!producto) return []
+  if ((producto as any).imagenes?.length) return (producto as any).imagenes
+  return producto.imagen ? [producto.imagen] : []
+})
+
+const refrescarSwipers = async () => {
+  await nextTick()
+
+  if (mainSwiper.value?.update) {
+    mainSwiper.value.update()
+    mainSwiper.value.updateSlides?.()
+    mainSwiper.value.updateProgress?.()
+    mainSwiper.value.updateSize?.()
+  }
+
+  if (thumbsSwiper.value?.update) {
+    thumbsSwiper.value.update()
+    thumbsSwiper.value.updateSlides?.()
+    thumbsSwiper.value.updateProgress?.()
+    thumbsSwiper.value.updateSize?.()
+  }
+}
+
 useHead({
   title: producto?.nombre || 'Producto Oligume',
   meta: [
@@ -28,13 +67,9 @@ const categoriaSEO = computed(() => {
 
   const nombre = producto.nombre.toLowerCase()
 
-  if (nombre.includes('aceite de oliva')) {
-    return 'Aceite de Oliva Extra Virgen'
-  } else if (nombre.includes('aceitunas')) {
-    return 'Aceitunas Ecológicas'
-  } else {
-    return 'Producto Oligume'
-  }
+  if (nombre.includes('aceite de oliva')) return 'Aceite de Oliva Extra Virgen'
+  if (nombre.includes('aceitunas')) return 'Aceitunas Ecológicas'
+  return 'Producto Oligume'
 })
 
 const textoDescripcion = computed(() => {
@@ -67,85 +102,192 @@ const textoNutricional = computed(() => {
 </script>
 
 <template>
-  <!-- <pre>producto {{ producto }}</pre> -->
-   <p class="d-none">slug {{ slug }}</p>
+  <p class="d-none">slug {{ slug }}</p>
+
   <div class="wrap-detalle-producto">
     <div class="producto-header">
       <div class="container">
-       <!--  <h1>Aceite de oliva extra virgen</h1> -->
         <h1>{{ categoriaSEO }}</h1>
       </div>
     </div>
+
     <div class="producto-detalle">
-      <div class="container py-5" v-if="producto">
-        <!-- <NuxtLink to="/" class="btn btn-outline-secondary mt-3">← Volver</NuxtLink> -->
-        <div class="row">
+      <div v-if="producto" class="container py-5">
+        <div class="row g-4 align-items-start">
           <div class="col-md-6">
-            <img :src="producto.imagen" :alt="producto.nombre" class="img-fluid rounded" />
+            <div class="producto-gallery">
+              <ClientOnly>
+                <Swiper
+                  v-if="imagenesProducto.length"
+                  @swiper="setMainSwiper"
+                  :modules="[Navigation, Thumbs, FreeMode, Zoom]"
+                  :navigation="imagenesProducto.length > 1"
+                  :space-between="10"
+                  :observer="true"
+                  :observe-parents="true"
+                  :update-on-window-resize="true"
+                  :zoom="{
+                    maxRatio: 4,
+                    minRatio: 1,
+                    toggle: true
+                  }"
+                  :thumbs="{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }"
+                  class="producto-swiper-main"
+                >
+                  <SwiperSlide
+                    v-for="(img, index) in imagenesProducto"
+                    :key="`main-${index}`"
+                  >
+                    <div class="producto-imagen-wrap swiper-zoom-container">
+                      <img
+                        :src="img"
+                        :alt="`${producto.nombre} ${index + 1}`"
+                        class="producto-imagen"
+                        :loading="index === 0 ? 'eager' : 'lazy'"
+                        decoding="async"
+                        draggable="false"
+                        @load="refrescarSwipers"
+                      />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+
+                <Swiper
+                  v-if="imagenesProducto.length > 1"
+                  @swiper="setThumbsSwiper"
+                  :modules="[Thumbs, FreeMode]"
+                  :space-between="12"
+                  :slides-per-view="3"
+                  :free-mode="true"
+                  :watch-slides-progress="true"
+                  :observer="true"
+                  :observe-parents="true"
+                  :update-on-window-resize="true"
+                  class="producto-swiper-thumbs mt-3"
+                >
+                  <SwiperSlide
+                    v-for="(img, index) in imagenesProducto"
+                    :key="`thumb-${index}`"
+                    class="thumb-slide"
+                  >
+                    <div class="thumb-imagen-wrap">
+                      <img
+                        :src="img"
+                        :alt="`${producto.nombre} miniatura ${index + 1}`"
+                        class="thumb-imagen"
+                        :loading="index === 0 ? 'eager' : 'lazy'"
+                        decoding="async"
+                        draggable="false"
+                        @load="refrescarSwipers"
+                      />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </ClientOnly>
+            </div>
           </div>
+
           <div class="col-md-6">
             <h1 class="mb-3">{{ producto.nombre }}</h1>
-            <div class="fs-5 mb-3">PRECIO:
-              <span class="text-decoration-line-through me-1">S/.{{ producto.precioOld }} </span>
-              <span class="precio-real"> S/.{{ producto.precio }}</span>
+
+            <div class="fs-5 mb-3">
+              PRECIO:
+              <span class="text-decoration-line-through me-1">S/.{{ producto.precioOld }}</span>
+              <span class="precio-real">S/.{{ producto.precio }}</span>
             </div>
-            <!-- <div v-if="producto.entregaGratis" class="badge-delivery mb-4">
-              🚚 <strong>¡Delivery GRATIS en Lima Metropolitana!</strong>
-            </div> -->
+
             <div v-if="producto.entregaGratis" class="badge-delivery mb-4">
-              🚚 <strong>¡ GRATIS Jarrita dispensaror de Aceite!</strong>
+              🚚 <strong>¡ GRATIS Jarrita dispensadora de Aceite!</strong>
             </div>
+
             <ul class="data-producto">
               <li>Marca: <span>Oligume</span></li>
               <li>Región: <span>AREQUIPA</span></li>
-              <li>
-                Presentación: <span> {{ producto.descripcion }}</span>
-              </li>
-              <li>Peso <span>{{ producto.peso_en }}</span></li>
-              <li>Pedido Min: <span> 1</span></li>
-              <li>Disponibilidad: <span> Todo el año</span></li>
-              <li>Descripción: {{ producto.descripcion }}</li>
+              <li>Presentación: <span>{{ producto.descripcion }}</span></li>
+              <li>Peso: <span>{{ producto.peso_en }}</span></li>
+              <li>Pedido Min: <span>1</span></li>
+              <li>Disponibilidad: <span>Todo el año</span></li>
+              <li>Descripción: <span>{{ producto.descripcion }}</span></li>
             </ul>
-            <NuxtLink :to="producto.categoria === 'promocion' ? '/cyber_wow' : '/'" class="btn btn-outline-secondary mt-3 me-2">← Volver</NuxtLink>
-              <a
-                :href="`https://wa.me/51941498032?text=Hola,%20deseo%20información%20sobre%20el%20producto%20${encodeURIComponent(producto?.nombre || '')}`"
-                target="_blank"
-                class="btn btn-success mt-3">
-                <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
-              </a>
 
+            <NuxtLink
+              :to="producto.categoria === 'promocion' ? '/cyber_wow' : '/'"
+              class="btn btn-outline-secondary mt-3 me-2"
+            >
+              ← Volver
+            </NuxtLink>
+
+            <a
+              :href="`https://wa.me/51941498032?text=Hola,%20deseo%20información%20sobre%20el%20producto%20${encodeURIComponent(producto?.nombre || '')}`"
+              target="_blank"
+              class="btn btn-success mt-3"
+            >
+              <i class="fab fa-whatsapp me-1"></i> Comprar por WhatsApp
+            </a>
           </div>
         </div>
       </div>
+
       <div v-else class="container text-center py-5">
         <h2>Producto no encontrado 😢</h2>
         <NuxtLink to="/" class="btn btn-outline-secondary mt-3">← Volver al inicio</NuxtLink>
       </div>
+
       <div class="section-descripcion">
         <div class="container">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                role="tab" aria-controls="home" aria-selected="true">Descripción</button>
+              <button
+                class="nav-link active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+              >
+                Descripción
+              </button>
             </li>
+
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                role="tab" aria-controls="profile" aria-selected="false">Información Nutricional</button>
+              <button
+                class="nav-link"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                Información Nutricional
+              </button>
             </li>
+
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
-                role="tab" aria-controls="contact" aria-selected="false">Información de Envio</button>
+              <button
+                class="nav-link"
+                id="contact-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#contact"
+                type="button"
+                role="tab"
+                aria-controls="contact"
+                aria-selected="false"
+              >
+                Información de Envío
+              </button>
             </li>
           </ul>
+
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <p>{{ textoDescripcion }}</p>
             </div>
-            <!-- <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <p>{{ textoNutricional }}</p>
-            </div> -->
+
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <!-- Aceite de oliva -->
               <template v-if="producto && producto.nombre.toLowerCase().includes('aceite de oliva')">
                 <p>
                   El aceite de oliva extra virgen Oligume aporta grasas monoinsaturadas saludables que ayudan a reducir el colesterol LDL ("malo")
@@ -174,7 +316,6 @@ const textoNutricional = computed(() => {
                 <p class="text-muted"><em>Valores aproximados.</em></p>
               </template>
 
-              <!-- Aceitunas -->
               <template v-else-if="producto && producto.nombre.toLowerCase().includes('aceituna')">
                 <p>{{ textoNutricional }}</p>
 
@@ -201,34 +342,112 @@ const textoNutricional = computed(() => {
                 <p class="text-muted"><em>Valores aproximados.</em></p>
               </template>
 
-              <!-- Otros productos -->
               <template v-else>
                 <p>{{ textoNutricional }}</p>
               </template>
             </div>
 
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            
-             <!--  <p>
-                Realizamos envíos a todos los distritos de Lima Metropolitana y Callao. Para envíos a provincias, trabajamos con agencias de transporte confiables como Shalom, Olva Courier u otra de preferencia del cliente. El costo de envío será calculado al momento de la cotización, según destino y proveedor seleccionado.
-              </p> -->
-
               <p>
-                  Realizamos envíos a todos los distritos de <strong>Lima Metropolitana y Callao</strong>.<br>
-                  Para envíos a <strong>provincias</strong>, trabajamos con agencias de transporte confiables como
-                  <strong>Shalom</strong>, <strong>Olva Courier</strong> u otra de preferencia del cliente.<br>
-                  El <strong>costo de envío</strong> se calcula según el destino y el peso del pedido y se confirma al momento de cerrar la compra.<br>
-                  También puedes <strong>coordinar el recojo</strong> en nuestras tiendas de <strong>Comas (Lima)</strong> o
-                  <strong>Acarí (Arequipa)</strong> previa coordinación por WhatsApp.
-                </p>
-
-              
+                Realizamos envíos a todos los distritos de <strong>Lima Metropolitana y Callao</strong>.<br>
+                Para envíos a <strong>provincias</strong>, trabajamos con agencias de transporte confiables como
+                <strong>Shalom</strong>, <strong>Olva Courier</strong> u otra de preferencia del cliente.<br>
+                El <strong>costo de envío</strong> se calcula según el destino y el peso del pedido y se confirma al momento de cerrar la compra.<br>
+                También puedes <strong>coordinar el recojo</strong> en nuestras tiendas de <strong>Comas (Lima)</strong> o
+                <strong>Acarí (Arequipa)</strong> previa coordinación por WhatsApp.
+              </p>
             </div>
-
-            
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.producto-gallery {
+  width: 100%;
+}
+
+.producto-swiper-main {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f7f7f7;
+  touch-action: pan-y;
+}
+
+.producto-imagen-wrap {
+  width: 100%;
+  height: 520px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.producto-swiper-thumbs {
+  padding: 4px 2px;
+}
+
+.thumb-slide {
+  cursor: pointer;
+}
+
+.thumb-imagen-wrap {
+  height: 110px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  padding: 0.5rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.thumb-imagen-wrap:hover {
+  transform: translateY(-2px);
+}
+
+.thumb-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+:deep(.swiper-slide-thumb-active .thumb-imagen-wrap) {
+  border-color: #7db343;
+}
+
+:deep(.producto-swiper-main .swiper-button-next),
+:deep(.producto-swiper-main .swiper-button-prev) {
+  color: #bdbdbd;
+}
+
+:deep(.producto-swiper-main .swiper-button-next:after),
+:deep(.producto-swiper-main .swiper-button-prev:after) {
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  .producto-imagen-wrap {
+    height: 340px;
+    padding: 0.75rem;
+  }
+
+  .thumb-imagen-wrap {
+    height: 82px;
+  }
+}
+</style>
